@@ -1,0 +1,16 @@
+current directory: /Users/admin/Downloads/testhtml/hydejack-starter-kit/vendor/bundle/ruby/3.1.0/gems/unf_ext-0.0.8.2/ext/unf_ext
+/Users/admin/.rubies/ruby-3.1.2/bin/ruby -I /Users/admin/.rubies/ruby-3.1.2/lib/ruby/site_ruby/3.1.0 extconf.rb
+checking for -lstdc++... yes
+creating Makefile
+
+current directory: /Users/admin/Downloads/testhtml/hydejack-starter-kit/vendor/bundle/ruby/3.1.0/gems/unf_ext-0.0.8.2/ext/unf_ext
+make DESTDIR\= sitearchdir\=./.gem.20220828-67108-un3ni5 sitelibdir\=./.gem.20220828-67108-un3ni5 clean
+
+current directory: /Users/admin/Downloads/testhtml/hydejack-starter-kit/vendor/bundle/ruby/3.1.0/gems/unf_ext-0.0.8.2/ext/unf_ext
+make DESTDIR\= sitearchdir\=./.gem.20220828-67108-un3ni5 sitelibdir\=./.gem.20220828-67108-un3ni5
+compiling unf.cc
+linking shared-object unf_ext.bundle
+
+current directory: /Users/admin/Downloads/testhtml/hydejack-starter-kit/vendor/bundle/ruby/3.1.0/gems/unf_ext-0.0.8.2/ext/unf_ext
+make DESTDIR\= sitearchdir\=./.gem.20220828-67108-un3ni5 sitelibdir\=./.gem.20220828-67108-un3ni5 install
+/usr/bin/install -c -m 0755 unf_ext.bundle ./.gem.20220828-67108-un3ni5
