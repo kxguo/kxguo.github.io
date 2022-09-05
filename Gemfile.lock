@@ -259,6 +259,7 @@ PLATFORMS
 DEPENDENCIES
   duktape
   github-pages (~> 227)
+  jekyll-avatar
   webrick
 
 BUNDLED WITH

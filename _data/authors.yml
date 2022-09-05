@@ -2,39 +2,40 @@
 # Must be the same as `author` in `_config.yml`.
 # Change `author1` to your shortname.
 author1:
-  name:              <firstname> <lastname>
-  email:             <mail@domain.tld>
+  name:              Kexin Guo
+  email:             kxguo@pku.edu.cn
 
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             |
     Hi, I am a data analyst with 3-year experience in China IT Industry. 
-    I have been working in BOSS ZHIPIN, XIAOMI, and EigenPhi. 
-    
+    I have worked in BOSS ZHIPIN and XIAOMI before I joined EigenPhi. 
+    EigenPhi is a company dedicated to bringing transparency to statistical MEV activities on Ethereum and other crypto chains.
+
     Before the career transition, I was an astrophysicist, 
     focusing on galaxy evolution based on large-sample statistical analysis.
     The avatar was from the official photo token in ICRAR (International Centre for Radio and Astronomy Research, Perth/Australia) during my 2-year work as a research assistant.
   
     I am also an amateur in Japanese translation. 
-    I was a text translator for games and a column translator for Newton Science magazine. 
-    I like listening to music and swimming.
+    I was a text translator for video games and a column translator for Newton Science magazine. 
+    I like listening to music and swimming in my idle time.
   #  Open `_data/authors.yml` to edit this text.
 
   # This photo will be used in the about section
   picture:
-    path:            https://via.placeholder.com/128x128
+    path:            /assets/img/me.jpeg
     # srcset is optional, but can be used to provide higher res versions for retina displays
     srcset:
-      1x:            https://via.placeholder.com/128x128
-      2x:            https://via.placeholder.com/256x256
+      1x:            /assets/img/me.jpeg
+      2x:            /assets/img/me.jpeg
 
   # Social media icons in sidebar
   # Comment/uncommet to show/hide
   # Rearrange to change the order in which they appear
   social:
-    twitter:         <username>
-    github:          <username>
-    # email:           <mail@domain.tld>
+    twitter:         raintuner
+    github:          kxguo
+    email:           <kxguo@pku.edu.cn>
     # rss:             https://<url>/feed.xml
     # facebook:        <username>
     # google:          <number>
