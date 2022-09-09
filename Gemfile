@@ -12,6 +12,7 @@ source "https://rubygems.org"
 
 # A JavaScript runtime for ruby that helps with running the katex gem above.
 gem "duktape"
+gem "kramdown-math-katex"
 
 # Fixes `jekyll serve` in ruby 3
 gem "webrick"
