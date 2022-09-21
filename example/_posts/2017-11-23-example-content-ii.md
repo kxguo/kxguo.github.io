@@ -3,6 +3,7 @@ layout: post
 title: Example Content II
 description: >
   A page showing how regular markdown content is styled in Hydejack.
+tags: [how-to-use]
 image: /assets/img/blog/example-content-ii.jpg
 sitemap: false
 ---

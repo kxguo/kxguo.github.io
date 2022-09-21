@@ -3,6 +3,7 @@ layout: post
 title: Example Content III
 description: >
   A page showing Hydejack-specific markdown content.
+tags: [how-to-use]
 image: 
   path: /assets/img/blog/example-content-iii.jpg
   srcset:

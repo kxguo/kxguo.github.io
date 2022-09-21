@@ -1,0 +1,89 @@
+# The primary author of this blog.
+# Must be the same as `author` in `_config.yml`.
+# Change `author1` to your shortname.
+author1:
+  name:              Kexin Guo
+  email:             kxguo@pku.edu.cn
+
+  # Used at the bottom of each page and at the top of the `about` layout
+  # Markdown enabled, can use multiple paragraphs (enabled by `|`)
+  about:             |
+    Hi, I am a data analyst with 3-year experience in China IT Industry. 
+#    I have worked in BOSS ZHIPIN and XIAOMI before I joined EigenPhi. 
+#    EigenPhi is a company dedicated to bringing transparency to statistical MEV activities on Ethereum and other crypto chains.
+
+    Before the career transition, I was an astrophysicist, 
+    focusing on galaxy evolution based on large-sample statistical analysis.
+#    The avatar was from the official photo token in ICRAR (International Centre for Radio and Astronomy Research, Perth/Australia) during my 2-year work as a research assistant.
+  
+    I am also an amateur in Japanese translation. 
+#    I was a text translator for video games and a column translator for Newton Science magazine. 
+    I like listening to music and swimming in my idle time.
+  #  Open `_data/authors.yml` to edit this text.
+
+  # This photo will be used in the about section
+  picture:
+    path:            /assets/img/me.jpeg
+    # srcset is optional, but can be used to provide higher res versions for retina displays
+    srcset:
+      1x:            /assets/img/me.jpeg
+      2x:            /assets/img/me.jpeg
+
+  # Social media icons in sidebar
+  # Comment/uncommet to show/hide
+  # Rearrange to change the order in which they appear
+  social:
+    twitter:         raintuner
+    github:          kxguo
+    email:           <kxguo@pku.edu.cn>
+    # rss:             https://<url>/feed.xml
+    # facebook:        <username>
+    # google:          <number>
+    # vk:              <username>
+    # youtube:         <string_string_string>
+    # vimeo:           <username>
+    # vine:            <username>
+    # spotify:         <user>/<number>
+    # soundcloud:      <username>
+    # lastfm:          <username>
+    # instagram:       <username>
+    # flickr:          <string@string>
+    # 500px:           <username>
+    # dribbble:        <username>
+    # behance:         <username>
+    # deviantart:      <username>
+    # ello:            <username>
+    # twitch:          <username>
+    # steam:           <number>
+    # reddit:          <username>
+    # tumblr:          <username>
+    # pinterest:       <username>
+    # foursquare:      <number>
+    # yelp:            <string>
+    # stackoverflow:   <number/username>
+    # npm:             <username>
+    # hackernews:      <username>
+    # trello:          <firstnamelastname>
+    # linkedin:        <firstname-lastname-string>
+    # xing:            <firstname_lastname_counter>
+    # blogger:         <number>
+    # delicious:       <username>
+    # stumbleupon:     <username>
+    # paypal:          <username>
+    # download:        <url>
+    # keybase          <username>
+
+# Another author (optional)
+author2:
+  name:              <firtname> <lastname>
+  email:             <mail@domain.tld>
+  about:             |
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+    Open `_data/authors.yml` to edit this text.
+
+  picture:           https://placehold.it/128x128
+  twitter:           <username>
+  github:            <username>

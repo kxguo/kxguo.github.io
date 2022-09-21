@@ -9,17 +9,12 @@ author1:
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             |
     Hi, I am a data analyst with 3-year experience in China IT Industry. 
-    I have worked in BOSS ZHIPIN and XIAOMI before I joined EigenPhi. 
-    EigenPhi is a company dedicated to bringing transparency to statistical MEV activities on Ethereum and other crypto chains.
 
     Before the career transition, I was an astrophysicist, 
     focusing on galaxy evolution based on large-sample statistical analysis.
-    The avatar was from the official photo token in ICRAR (International Centre for Radio and Astronomy Research, Perth/Australia) during my 2-year work as a research assistant.
   
     I am also an amateur in Japanese translation. 
-    I was a text translator for video games and a column translator for Newton Science magazine. 
     I like listening to music and swimming in my idle time.
-  #  Open `_data/authors.yml` to edit this text.
 
   # This photo will be used in the about section
   picture:
