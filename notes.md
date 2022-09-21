@@ -51,7 +51,7 @@ export https_proxy=http://127.0.0.1:1087
 	convert -delay 20 F_*.png -loop 0 miff:- | convert - animation.avi
 	#可以转换成其他格式播放
 
-Continue with [Scripts](scripts.md){:.heading.flip-title}
+<!--- Continue with [Scripts](scripts.md){:.heading.flip-title}-->
 {:.read-more}
 
 
