@@ -1,5 +1,105 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2022-09-22T00:46:20+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Kexin Guo</title><subtitle>This website is constructed with the Jekyll theme Hydejack. Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.
-</subtitle><author><name>Kexin Guo</name><email>kxguo@pku.edu.cn</email></author><entry><title type="html">SQL Notes</title><link href="http://localhost:4000/blog/2022-08-04-sql_notes/" rel="alternate" type="text/html" title="SQL Notes" /><published>2022-08-04T00:00:00+08:00</published><updated>2022-08-04T00:00:00+08:00</updated><id>http://localhost:4000/blog/sql_notes</id><content type="html" xml:base="http://localhost:4000/blog/2022-08-04-sql_notes/">&lt;p&gt;快速定位：&lt;a href=&quot;#窗口函数&quot;&gt;窗口函数&lt;/a&gt;, &lt;a href=&quot;#行列互换&quot;&gt;行列互换&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2022-09-22T08:00:20+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Kexin Guo</title><subtitle>This website is constructed with the Jekyll theme Hydejack. Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.
+</subtitle><author><name>Kexin Guo</name><email>kxguo@pku.edu.cn</email></author><entry><title type="html">Google Cloud 部署和data studio可视化相关</title><link href="http://localhost:4000/blog/2022-08-27-google_rel/" rel="alternate" type="text/html" title="Google Cloud 部署和data studio可视化相关" /><published>2022-08-27T00:00:00+08:00</published><updated>2022-08-27T00:00:00+08:00</updated><id>http://localhost:4000/blog/google_rel</id><content type="html" xml:base="http://localhost:4000/blog/2022-08-27-google_rel/">&lt;p&gt;快速定位：&lt;a href=&quot;#cloud function trouble shouting&quot;&gt;Cloud Function Trouble Shouting&lt;/a&gt;
+, &lt;a href=&quot;#数据洞察BI看板搭建&quot;&gt;数据洞察BI看板搭建&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul class=&quot;large-only&quot; id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#cloud-function-trouble-shouting&quot; id=&quot;markdown-toc-cloud-function-trouble-shouting&quot;&gt;Cloud Function Trouble Shouting&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#requirementstxt&quot; id=&quot;markdown-toc-requirementstxt&quot;&gt;requirements.txt&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#main-takes-0-positional-arguments-but-1-was-given&quot; id=&quot;markdown-toc-main-takes-0-positional-arguments-but-1-was-given&quot;&gt;main() takes 0 positional arguments but 1 was given&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#the-view-function-for-run-did-not-return-a-valid-response-the-function-either-returned-none-or-ended-without-a-return-statement&quot; id=&quot;markdown-toc-the-view-function-for-run-did-not-return-a-valid-response-the-function-either-returned-none-or-ended-without-a-return-statement&quot;&gt;The view function for ‘run’ did not return a valid response. The function either returned None or ended without a return statement.&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#cloud-spanner不支持insert-conflict语法&quot; id=&quot;markdown-toc-cloud-spanner不支持insert-conflict语法&quot;&gt;Cloud Spanner不支持Insert Conflict语法&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#数据洞察bi看板搭建&quot; id=&quot;markdown-toc-数据洞察bi看板搭建&quot;&gt;数据洞察BI看板搭建&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#trouble-shooting&quot; id=&quot;markdown-toc-trouble-shooting&quot;&gt;trouble shooting&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#展示某产品研发阶段各版本迭代效果的示例图&quot; id=&quot;markdown-toc-展示某产品研发阶段各版本迭代效果的示例图&quot;&gt;展示某产品研发阶段各版本迭代效果的示例图&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;cloud-function-trouble-shouting&quot;&gt;Cloud Function Trouble Shouting&lt;/h2&gt;
+
+&lt;h3 id=&quot;requirementstxt&quot;&gt;requirements.txt&lt;/h3&gt;
+&lt;p&gt;为了部署Python查询spanner sql时的样例&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;functions-framework&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;3.&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;requests&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;2.28.&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;
+google-cloud-spanner&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;3.19.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;main-takes-0-positional-arguments-but-1-was-given&quot;&gt;main() takes 0 positional arguments but 1 was given&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;利用如下语句查询时遇到的错误&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;spanner_client&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;spanner&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Client&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;问题在于实际上执行函数main传入参数不为空，因此加入一个参数占位即可&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;the-view-function-for-run-did-not-return-a-valid-response-the-function-either-returned-none-or-ended-without-a-return-statement&quot;&gt;The view function for ‘run’ did not return a valid response. The function either returned None or ended without a return statement.&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Cloud Function 需要返回值，最简单的做法是在主函数最后添加一条return&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;cloud-spanner不支持insert-conflict语法&quot;&gt;Cloud Spanner不支持Insert Conflict语法&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;在插入表之前删除表数据（保留元数据）&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;两个问题最终样例sql如:&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;google.cloud&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;spanner&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;instance_id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;[instance name]&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;database_id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;[database name]&quot;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;#无传入参数时，在main后加入参数占位
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;spanner_client&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;spanner&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Client&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;instance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;spanner_client&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;instance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;instance_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;database&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;instance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;database&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;database_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	
+	&lt;span class=&quot;c1&quot;&gt;#删除表数据
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;remaining_none&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;spanner&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;KeySet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;all_&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;database&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;batch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;batch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;batch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;delete&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;[table_name]&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;remaining_none&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	
+	&lt;span class=&quot;c1&quot;&gt;#插入新数据
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;database&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run_in_transaction&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;insert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;c1&quot;&gt;#给出返回值
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;OK&quot;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;insert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;transaction&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+	
+	&lt;span class=&quot;n&quot;&gt;row_ct&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;transaction&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;execute_update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+	&lt;span class=&quot;s&quot;&gt;&quot;[SQL LINES1]&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;\
+	&lt;span class=&quot;s&quot;&gt;&quot;[SQL LINES2]&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;数据洞察bi看板搭建&quot;&gt;数据洞察BI看板搭建&lt;/h2&gt;
+
+&lt;h3 id=&quot;trouble-shooting&quot;&gt;trouble shooting&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;连接数据源-&amp;gt; 报告，或实验阶段连接数据源-&amp;gt;探索，但探索内容不会保存为报告&lt;/li&gt;
+  &lt;li&gt;连接spanner的sql语法与spanner相同，但查询中整形数据列必须强制转换为float
+，否则看板搭建时会无法显示并且提示错误&lt;/li&gt;
+  &lt;li&gt;sql查询的时间，timestamp可以被识别为datetime格式，但无法画出时间序列&lt;/li&gt;
+  &lt;li&gt;下图中的时间序列展示方式为：连接数据源时，将sql查询的时间以string形式导入
+，并画折线图&lt;/li&gt;
+  &lt;li&gt;连接后修改字段，也可以在实际使用时增加字段，没有区别&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;展示某产品研发阶段各版本迭代效果的示例图&quot;&gt;展示某产品研发阶段各版本迭代效果的示例图&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/bi_datastudio.png&quot; alt=&quot;Full-width image&quot; /&gt;&lt;/p&gt;</content><author><name>Kexin Guo</name><email>kxguo@pku.edu.cn</email></author><category term="blog" /><category term="BI" /><category term="Spanner" /><category term="Data Analysis" /><summary type="html">快速定位：Cloud Function Trouble Shouting , 数据洞察BI看板搭建</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/cat_0827.jpeg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/cat_0827.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">SQL Notes</title><link href="http://localhost:4000/blog/2022-08-04-sql_notes/" rel="alternate" type="text/html" title="SQL Notes" /><published>2022-08-04T00:00:00+08:00</published><updated>2022-08-04T00:00:00+08:00</updated><id>http://localhost:4000/blog/sql_notes</id><content type="html" xml:base="http://localhost:4000/blog/2022-08-04-sql_notes/">&lt;p&gt;快速定位：&lt;a href=&quot;#窗口函数&quot;&gt;窗口函数&lt;/a&gt;, &lt;a href=&quot;#行列互换&quot;&gt;行列互换&lt;/a&gt;&lt;/p&gt;
 
 &lt;ul class=&quot;large-only&quot; id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#窗口函数&quot; id=&quot;markdown-toc-窗口函数&quot;&gt;窗口函数&lt;/a&gt;    &lt;ul&gt;
@@ -55,7 +155,7 @@
   &lt;li&gt;array实现列转行&lt;/li&gt;
   &lt;li&gt;array_to_string以’,’为间隔拼接字符串&lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;||&lt;/code&gt;拼接字符串，效果和concat()相同但更简洁&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Kexin Guo</name><email>kxguo@pku.edu.cn</email></author><category term="blog" /><category term="sql" /><summary type="html">快速定位：窗口函数, 行列互换</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/cat_0804.jpeg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/cat_0804.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Introducing Hydejack 9</title><link href="http://localhost:4000/example/2020-07-03-introducing-hydejack-9/" rel="alternate" type="text/html" title="Introducing Hydejack 9" /><published>2020-07-03T00:00:00+08:00</published><updated>2020-07-03T00:00:00+08:00</updated><id>http://localhost:4000/example/introducing-hydejack-9</id><content type="html" xml:base="http://localhost:4000/example/2020-07-03-introducing-hydejack-9/">&lt;p class=&quot;lead&quot;&gt;Version 9 is the most complete version of Hydejack yet.&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>Kexin Guo</name><email>kxguo@pku.edu.cn</email></author><category term="blog" /><category term="SQL" /><category term="Data Analysis" /><summary type="html">快速定位：窗口函数, 行列互换</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/cat_0804.jpeg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/cat_0804.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Introducing Hydejack 9</title><link href="http://localhost:4000/example/2020-07-03-introducing-hydejack-9/" rel="alternate" type="text/html" title="Introducing Hydejack 9" /><published>2020-07-03T00:00:00+08:00</published><updated>2020-07-03T00:00:00+08:00</updated><id>http://localhost:4000/example/introducing-hydejack-9</id><content type="html" xml:base="http://localhost:4000/example/2020-07-03-introducing-hydejack-9/">&lt;p class=&quot;lead&quot;&gt;Version 9 is the most complete version of Hydejack yet.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;#linking-in-style&quot;&gt;Modernized&lt;/a&gt; &lt;a href=&quot;#whats-in-the-cards&quot;&gt;design&lt;/a&gt;, &lt;a href=&quot;#ready-for-the-big-screen&quot;&gt;big headlines&lt;/a&gt;, big new features: &lt;a href=&quot;#built-in-search&quot;&gt;Built-In Search&lt;/a&gt;, &lt;a href=&quot;#sticky-table-of-contents&quot;&gt;Sticky Table of Contents&lt;/a&gt;, and &lt;a href=&quot;#auto-hiding-navbar&quot;&gt;Auto-Hiding Navbar&lt;/a&gt;. That &lt;a href=&quot;#and-much-more&quot;&gt;and more&lt;/a&gt; is Hydejack 9.&lt;/p&gt;
 

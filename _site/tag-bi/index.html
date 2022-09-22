@@ -32,21 +32,22 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   
     
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Build | Kexin Guo</title>
+<title>BI related | Kexin Guo</title>
 <meta name="generator" content="Jekyll v3.9.2" />
-<meta property="og:title" content="Build" />
+<meta property="og:title" content="BI related" />
 <meta name="author" content="Kexin Guo" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="This chapters shows how to prepare your Hydejack site for a production build and deployment on 3rd party hosting providers." />
-<meta property="og:description" content="This chapters shows how to prepare your Hydejack site for a production build and deployment on 3rd party hosting providers." />
-<link rel="canonical" href="http://localhost:4000/docs/build/" />
-<meta property="og:url" content="http://localhost:4000/docs/build/" />
+<meta name="description" content="这里记录了使用Tableau\Google Data Studio等工作日志" />
+<meta property="og:description" content="这里记录了使用Tableau\Google Data Studio等工作日志" />
+<link rel="canonical" href="http://localhost:4000/tag-bi/" />
+<meta property="og:url" content="http://localhost:4000/tag-bi/" />
 <meta property="og:site_name" content="Kexin Guo" />
-<meta property="og:type" content="website" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-09-22T08:00:20+08:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Build" />
+<meta property="twitter:title" content="BI related" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Kexin Guo"},"description":"This chapters shows how to prepare your Hydejack site for a production build and deployment on 3rd party hosting providers.","headline":"Build","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/logo.png"},"name":"Kexin Guo"},"url":"http://localhost:4000/docs/build/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Kexin Guo"},"dateModified":"2022-09-22T08:00:20+08:00","datePublished":"2022-09-22T08:00:20+08:00","description":"这里记录了使用Tableau\\Google Data Studio等工作日志","headline":"BI related","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/logo.png"},"name":"Kexin Guo"},"url":"http://localhost:4000/tag-bi/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -74,7 +75,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 <meta name="generator" content="Hydejack v9.1.6" />
 
 
-<link rel="alternate" href="http://localhost:4000/docs/build/" hreflang="en">
+<link rel="alternate" href="http://localhost:4000/tag-bi/" hreflang="en">
 
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Kexin Guo" />
 
@@ -177,7 +178,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 
   <main
   id="_main"
-  class="content layout-page"
+  class="content layout-list"
   role="main"
 >
   <nav id="breadcrumbs" class="screen-only"><ul>
@@ -188,16 +189,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
       <li>
         
           <span>/</span>
-          
-          
-          <a href="/docs/">docs</a>
-        
-      </li>
-    
-      <li>
-        
-          <span>/</span>
-          <span>build</span>
+          <span>tag-bi</span>
         
       </li>
     
@@ -205,91 +197,49 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 </ul></nav>
   <article class="page mb6" role="article">
   <header>
-    <h1 class="page-title">Build</h1>
+    <h1 class="page-title">BI related</h1>
     
 
 
 
   
-    <div class="hr pb0"></div>
+    <p class="note-sm" >
+      这里记录了使用Tableau\Google Data Studio等工作日志
+
+    </p>
   
 
 
   </header>
 
-  <p>This chapters shows how to prepare your Hydejack site for a production build and deployment on 3rd party hosting providers.</p>
+  
 
-<ol id="markdown-toc">
-  <li><a href="#building-locally" id="markdown-toc-building-locally">Building locally</a></li>
-  <li><a href="#building-locally-with-latent-semantic-analysis" id="markdown-toc-building-locally-with-latent-semantic-analysis">Building locally with latent semantic analysis</a></li>
-  <li><a href="#github-pages" id="markdown-toc-github-pages">GitHub Pages</a></li>
-</ol>
 
-<h2 id="building-locally">Building locally</h2>
-<p>When building Hydejack it is important to set the environment variable <code class="language-plaintext highlighter-rouge">JEKYLL_ENV</code> to <code class="language-plaintext highlighter-rouge">production</code>.
-Otherwise the output will not be minified. Building itself happens via Jekyll’s <code class="language-plaintext highlighter-rouge">build</code> command.</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ JEKYLL_ENV</span><span class="o">=</span>production bundle <span class="nb">exec </span>jekyll build
-</code></pre></div></div>
 
-<p>This will generate the finished static files in <code class="language-plaintext highlighter-rouge">_site</code>,
-which can be deployed using the methods outlined in the <a href="https://jekyllrb.com/docs/deployment-methods/">Jekyll Documentation</a>.</p>
 
-<h2 id="building-locally-with-latent-semantic-analysis">Building locally with latent semantic analysis</h2>
-<p>By default, related posts are simply the most recent posts.
-Hydejack modifies this a bit, by showing the most recent posts of the same category or tag.
-However, the results are still pretty “unrelated”.
-To provide better results, Jekyll supports <a href="https://en.wikipedia.org/wiki/Latent_semantic_analysis">latent semantic analysis</a> via <a href="http://www.classifier-reborn.com/"><code class="language-plaintext highlighter-rouge">classifier-reborn</code></a>’s
-<a href="http://www.classifier-reborn.com/lsi">Latent Semantic Indexer</a></p>
 
-<p>To use the <abbr title="Latent Semantic Indexer">LSI</abbr>, you first have to disable Hydejack’s default behavior,
-by setting <code class="language-plaintext highlighter-rouge">use_lsi: true</code> under the <code class="language-plaintext highlighter-rouge">hydejack</code> key in your config file.</p>
 
-<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># file: `_config.yml`</span>
-<span class="na">hydejack</span><span class="pi">:</span>
-  <span class="na">use_lsi</span><span class="pi">:</span> <span class="no">true</span>
-</code></pre></div></div>
 
-<p>Then, you have to run <code class="language-plaintext highlighter-rouge">jekyll build</code> with the <code class="language-plaintext highlighter-rouge">--lsi</code> flag:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ JEKYLL_ENV</span><span class="o">=</span>production bundle <span class="nb">exec </span>jekyll build <span class="nt">--lsi</span>
-</code></pre></div></div>
 
-<p>Note that this may take a long time.
-Once it is finished, the generated static files will be located in the <code class="language-plaintext highlighter-rouge">_site</code> directory,
-which can be deployed using the methods outlined in the <a href="https://jekyllrb.com/docs/deployment-methods/">Jekyll Documentation</a>.</p>
 
-<h2 id="github-pages">GitHub Pages</h2>
-<p>If you’re using the Starter Kit for GitHub pages, all you have to do is push your repository:</p>
+  
+  
+    
+    <h2 id="y-2022" class="hr-bottom">2022</h2>
+    <ul class="related-posts">
+    
+  
+  
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git add <span class="nb">.</span>
-<span class="nv">$ </span>git commit <span class="s2">"Update"</span>
-<span class="nv">$ </span>git push origin master
-</code></pre></div></div>
 
-<!-- ## GitHub Pages
-To deploy to GitHub Pages, the steps are:
+<li class="h4">
+  <a href="/blog/2022-08-27-google_rel/" class="flip-title"><span>Google Cloud 部署和data studio可视化相关</span></a>
+  <time class="faded fine" datetime="2022-08-27T00:00:00+08:00">27 Aug</time>
+</li>
 
-~~~bash
-$ cd _site
-$ git init # you only need to do this once
-$ git remote add origin <github_remote_url> # you only need to do this once
-$ git add .
-$ git commit -m "Build"
-$ git push origin master:<remote_branch>
-$ cd ..
-~~~
-
-`github_remote_url`
-: Find this on your repository's GitHub page.
-
-`remote_branch`
-: Either `master` for "user or organization pages", or `gh-pages` for "project pages"
-
-More on [user, organization, and project pages](https://help.github.com/articles/user-organization-and-project-pages/). -->
-
-<!-- Continue with [Advanced](/docs/advanced/){:.heading.flip-title}
-{:.read-more} -->
+  </ul>
 
 
 </article>
