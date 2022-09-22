@@ -1,6 +1,6 @@
 ---
 layout: page
-title: The SSFR Distribution
+title: Resolved Evolution Story
 description: >
   the main discovery of this paper
 hide_description: true
@@ -44,7 +44,7 @@ That is, bulgy galaxies perform wider distribution in SSFR than disky galaxies.
 ![Full-width image](/assets/img/blog/ssfr_dis3.png)
 
 
-Continue with [Decomposed Observation](ifu.md){:.heading.flip-title}
+Continue with [Resolved Story](ifu.md){:.heading.flip-title}
 {:.read-more}
 
 Back to [SFMS](sfms.md){:.heading.flip-title}
