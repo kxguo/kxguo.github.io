@@ -26,6 +26,7 @@ Here is a place describing my footprint as a former Astrophysical researcher.  I
 * [SDSS-IV MaNGA: The Roles of AGNs and Dynamical Processes in Star Formation Quenching in Nearby Disk Galaxies](https://arxiv.org/abs/1811.01957){:.heading.flip-title}
 
 --- digging into resolved information to find tricks in galaxy evolution
+[(*check details*)](ifu.md)
 {:.related-posts.faded}
 * [The SAMI Galaxy Survey: The contribution of different kinematic classes to the stellar mass function of nearby galaxies](https://arxiv.org/abs/1911.01433){:.heading.flip-title}
 
