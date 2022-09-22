@@ -25,32 +25,36 @@ export https_proxy=http://127.0.0.1:1087
 ## Image Magic 
 ### mac无法执行display
 需要重新安装imagemagick和xquartz, 来自[homebrew-imagemagick-x11](https://github.com/tlk/homebrew-imagemagick-x11)
-
-	brew uninstall imagemagick # without X11 support
-	brew install --cask xquartz
-	brew install tlk/imagemagick-x11/imagemagick --with-graphviz
-
+~~~shell
+brew uninstall imagemagick # without X11 support
+brew install --cask xquartz
+brew install tlk/imagemagick-x11/imagemagick --with-graphviz
+~~~
 ### 查看图片大小分辨率等信息
-
-	identify icrar_pic.jpeg
-
+~~~shell
+identify icrar_pic.jpeg
+~~~
 ### 缩小图片并切割同时转移重心
-
-	convert icrar_pic.jpeg -resize 500x500 -gravity center -crop 256x256+0-85 input.png
-	#注1:resize并不会强行改变比例
-	#注2:(0,-85)为从左上角开始的横向和纵向裁剪位置
-
+~~~shell
+convert icrar_pic.jpeg -resize 500x500 -gravity center -crop 256x256+0-85 input.png
+#注1:resize并不会强行改变比例
+#注2:(0,-85)为从左上角开始的横向和纵向裁剪位置
+~~~
 ### 从中心切割为圆形
-	
-	convert input.png '(' +clone -alpha transparent -draw 'circle 150,150 150,0' ')' -compose copyopacity -composite out.png
-
+~~~shell	
+convert input.png '(' +clone -alpha transparent -draw 'circle 150,150 150,0' ')' -compose copyopacity -composite out.png
+~~~
 ### 制作gif
-	
-	convert -delay 20 F_*.png -loop 0 movie.gif
-	#注:-loop 0代表"play forever"
-	convert -delay 20 F_*.png -loop 0 miff:- | convert - animation.avi
-	#可以转换成其他格式播放
-
+~~~shell
+convert -delay 20 F_*.png -loop 0 movie.gif
+#注:-loop 0代表"play forever"
+convert -delay 20 F_*.png -loop 0 miff:- | convert - animation.avi
+#可以转换成其他格式播放
+~~~
+### 模糊图像
+~~~shell
+convert source.png -channel RGBA -blur 0x8 blurred.png
+~~~
 <!--- Continue with [Scripts](scripts.md){:.heading.flip-title}-->
 {:.read-more}
 

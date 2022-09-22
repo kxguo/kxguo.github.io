@@ -111,7 +111,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2022-09-22T18:55:48+08:00',
+    INDEX_KEY: 'index--2022-09-22T20:19:00+08:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -219,6 +219,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
       <li><a href="#缩小图片并切割同时转移重心" id="markdown-toc-缩小图片并切割同时转移重心">缩小图片并切割同时转移重心</a></li>
       <li><a href="#从中心切割为圆形" id="markdown-toc-从中心切割为圆形">从中心切割为圆形</a></li>
       <li><a href="#制作gif" id="markdown-toc-制作gif">制作gif</a></li>
+      <li><a href="#模糊图像" id="markdown-toc-模糊图像">模糊图像</a></li>
     </ol>
   </li>
 </ol>
@@ -235,37 +236,30 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 <h2 id="image-magic">Image Magic</h2>
 <h3 id="mac无法执行display">mac无法执行display</h3>
 <p>需要重新安装imagemagick和xquartz, 来自<a href="https://github.com/tlk/homebrew-imagemagick-x11">homebrew-imagemagick-x11</a></p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew uninstall imagemagick # without X11 support
-brew install --cask xquartz
-brew install tlk/imagemagick-x11/imagemagick --with-graphviz
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew uninstall imagemagick <span class="c"># without X11 support</span>
+brew <span class="nb">install</span> <span class="nt">--cask</span> xquartz
+brew <span class="nb">install </span>tlk/imagemagick-x11/imagemagick <span class="nt">--with-graphviz</span>
 </code></pre></div></div>
-
 <h3 id="查看图片大小分辨率等信息">查看图片大小分辨率等信息</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>identify icrar_pic.jpeg
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>identify icrar_pic.jpeg
 </code></pre></div></div>
-
 <h3 id="缩小图片并切割同时转移重心">缩小图片并切割同时转移重心</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>convert icrar_pic.jpeg -resize 500x500 -gravity center -crop 256x256+0-85 input.png
-#注1:resize并不会强行改变比例
-#注2:(0,-85)为从左上角开始的横向和纵向裁剪位置
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>convert icrar_pic.jpeg <span class="nt">-resize</span> 500x500 <span class="nt">-gravity</span> center <span class="nt">-crop</span> 256x256+0-85 input.png
+<span class="c">#注1:resize并不会强行改变比例</span>
+<span class="c">#注2:(0,-85)为从左上角开始的横向和纵向裁剪位置</span>
 </code></pre></div></div>
-
 <h3 id="从中心切割为圆形">从中心切割为圆形</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>convert input.png '(' +clone -alpha transparent -draw 'circle 150,150 150,0' ')' -compose copyopacity -composite out.png
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>convert input.png <span class="s1">'('</span> +clone <span class="nt">-alpha</span> transparent <span class="nt">-draw</span> <span class="s1">'circle 150,150 150,0'</span> <span class="s1">')'</span> <span class="nt">-compose</span> copyopacity <span class="nt">-composite</span> out.png
 </code></pre></div></div>
-
 <h3 id="制作gif">制作gif</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>convert -delay 20 F_*.png -loop 0 movie.gif
-#注:-loop 0代表"play forever"
-convert -delay 20 F_*.png -loop 0 miff:- | convert - animation.avi
-#可以转换成其他格式播放
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>convert <span class="nt">-delay</span> 20 F_<span class="k">*</span>.png <span class="nt">-loop</span> 0 movie.gif
+<span class="c">#注:-loop 0代表"play forever"</span>
+convert <span class="nt">-delay</span> 20 F_<span class="k">*</span>.png <span class="nt">-loop</span> 0 miff:- | convert - animation.avi
+<span class="c">#可以转换成其他格式播放</span>
 </code></pre></div></div>
-
+<h3 id="模糊图像">模糊图像</h3>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>convert source.png <span class="nt">-channel</span> RGBA <span class="nt">-blur</span> 0x8 blurred.png
+</code></pre></div></div>
 <!--- Continue with [Scripts](scripts.md){:.heading.flip-title}-->
 
 

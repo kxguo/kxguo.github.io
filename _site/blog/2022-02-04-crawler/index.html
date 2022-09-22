@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="en"><!--
+ __  __                __                                     __
+/\ \/\ \              /\ \             __                    /\ \
+\ \ \_\ \   __  __    \_\ \      __   /\_\      __       ___ \ \ \/'\
+ \ \  _  \ /\ \/\ \   /'_` \   /'__`\ \/\ \   /'__`\    /'___\\ \ , <
+  \ \ \ \ \\ \ \_\ \ /\ \L\ \ /\  __/  \ \ \ /\ \L\.\_ /\ \__/ \ \ \\`\
+   \ \_\ \_\\/`____ \\ \___,_\\ \____\ _\ \ \\ \__/.\_\\ \____\ \ \_\ \_\
+    \/_/\/_/ `/___/> \\/__,_ / \/____//\ \_\ \\/__/\/_/ \/____/  \/_/\/_/
+                /\___/                \ \____/
+                \/__/                  \/___/
+
+Powered by Hydejack v9.1.6 <https://hydejack.com/>
+-->
+
+
+
+
+
+
+
+<head>
+  
+
+
+
+
+  <meta name="robots" content="noindex">
+
+
+
+  
+    
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>爬取orv并制作epub | Kexin Guo</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="爬取orv并制作epub" />
+<meta name="author" content="Kexin Guo" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="用爬虫爬取外网小说omniscient reader’s view并制作成epub阅读" />
+<meta property="og:description" content="用爬虫爬取外网小说omniscient reader’s view并制作成epub阅读" />
+<link rel="canonical" href="http://localhost:4000/blog/2022-02-04-crawler/" />
+<meta property="og:url" content="http://localhost:4000/blog/2022-02-04-crawler/" />
+<meta property="og:site_name" content="Kexin Guo" />
+<meta property="og:image" content="http://localhost:4000/assets/img/blog/orv.jpeg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-02-04T00:00:00+08:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/assets/img/blog/orv.jpeg" />
+<meta property="twitter:title" content="爬取orv并制作epub" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Kexin Guo"},"dateModified":"2022-02-04T00:00:00+08:00","datePublished":"2022-02-04T00:00:00+08:00","description":"用爬虫爬取外网小说omniscient reader’s view并制作成epub阅读","headline":"爬取orv并制作epub","image":"http://localhost:4000/assets/img/blog/orv.jpeg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2022-02-04-crawler/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/logo.png"},"name":"Kexin Guo"},"url":"http://localhost:4000/blog/2022-02-04-crawler/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+  
+
+
+
+  <meta name="theme-color" content="rgb(25,55,71)">
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Kexin Guo">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+<meta name="application-name" content="Kexin Guo">
+
+<meta name="generator" content="Hydejack v9.1.6" />
+
+
+<link rel="alternate" href="http://localhost:4000/blog/2022-02-04-crawler/" hreflang="en">
+
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Kexin Guo" />
+
+
+<link rel="shortcut icon"    href="/assets/icons/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+
+<link rel="manifest" href="/assets/site.webmanifest">
+
+<link rel="dns-prefetch" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.gstatic.com">
+
+
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+
+
+<link rel="preload" href="/assets/img/swipe.svg" as="image" id="_hrefSwipeSVG">
+
+
+
+
+
+
+<script>!function(r,c){"use strict";function a(e,t,n,o){e.addEventListener?e.addEventListener(t,n,o):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n}r.loadJS=function(e,t){var n=c.createElement("script"),e=(n.src=e,t&&a(n,"load",t,{once:!0}),c.scripts[0]);return e.parentNode.insertBefore(n,e),n},r._loaded=!1,r.loadJSDeferred=function(e,t){var n=c.createElement("script");function o(){r._loaded=!0,t&&a(n,"load",t,{once:!0});var e=c.scripts[0];e.parentNode.insertBefore(n,e)}return n.src=e,r._loaded?o():a(r,"load",o,{once:!0}),n},r.setRel=r.setRelStylesheet=function(e){a(c.getElementById(e),"load",function(){this.rel="stylesheet"},{once:!0})}}(window,document);
+!function(a){"use strict";var b=function(b,c,d){function e(a){return h.body?a():void setTimeout(function(){e(a)})}function f(){i.addEventListener&&i.removeEventListener("load",f),i.media=d||"all"}var g,h=a.document,i=h.createElement("link");if(c)g=c;else{var j=(h.body||h.getElementsByTagName("head")[0]).childNodes;g=j[j.length-1]}var k=h.styleSheets;i.rel="stylesheet",i.href=b,i.media="only x",e(function(){g.parentNode.insertBefore(i,c?g:g.nextSibling)});var l=function(a){for(var b=i.href,c=k.length;c--;)if(k[c].href===b)return a();setTimeout(function(){l(a)})};return i.addEventListener&&i.addEventListener("load",f),i.onloadcssdefined=l,l(f),i};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this);
+!function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(b){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d,d.getAttribute("media")),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this);
+!function(w) {
+  w._baseURL = '/';
+  w._publicPath = '/assets/js/';
+  w._noPushState = false;
+  w._noDrawer = false;
+  w._noNavbar = false;
+  w._noToc = false;
+  w._noSearch = false;
+  w._search = {
+    DATA_URL: '/assets/sitedata.json?no-cache',
+    STORAGE_KEY: 'mini-search/',
+    INDEX_KEY: 'index--2022-09-22T20:19:00+08:00',
+  };
+  w._clapButton = true;
+}(window);</script>
+
+
+<script async src="/assets/bower_components/MathJax/es5/tex-mml-chtml.js" id="_MathJax"></script>
+
+
+<!--[if gt IE 8]><!---->
+
+  
+
+
+
+
+<link rel="stylesheet" href="/assets/css/hydejack-9.1.6.css" id="_stylePreload">
+<link rel="stylesheet" href="/assets/icomoon/style.css" id="_iconsPreload">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:700%7CNoto+Sans:400,400i,700,700i&display=swap" id="_fontsPreload">
+
+
+
+  <style id="_pageStyle">
+
+html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);--accent-color-highlight: rgba(79,177,186,0.1);--accent-color-darkened: #409ba3;--theme-color: rgb(25,55,71)}
+
+</style>
+
+
+<!--<![endif]-->
+
+
+
+
+</head>
+
+<body class="no-break-layout">
+  
+
+
+<hy-push-state
+  id="_pushState"
+  replace-selector="#_main"
+  link-selector="a[href]:not([href^='/assets/']):not(.external):not(.no-push-state)"
+  script-selector="script"
+  duration="500"
+  hashchange
+>
+  
+  
+  <div id="_navbar" class="navbar fixed-top">
+  <div class="content">
+    <span class="sr-only">Jump to:</span>
+    <div class="nav-btn-bar">
+      <a id="_menu" class="nav-btn no-hover" href="#_drawer--opened">
+        <span class="sr-only">Navigation</span>
+        <span class="icon-menu"></span>
+      </a>
+      <div class="nav-span"></div>
+    </div>
+  </div>
+</div>
+<hr class="sr-only" hidden />
+
+  <main
+  id="_main"
+  class="content layout-post"
+  role="main"
+>
+  <nav id="breadcrumbs" class="screen-only"><ul>
+  
+  
+    <li><a href="/">home</a></li>
+    
+      <li>
+        
+          <span>/</span>
+          
+          
+          <a href="/blog/">blog</a>
+        
+      </li>
+    
+      <li>
+        
+          <span>/</span>
+          <span>2022-02-04-crawler</span>
+        
+      </li>
+    
+  
+</ul></nav>
+  
+
+
+
+
+
+
+
+
+
+
+<article id="post-blog-crawler" class="page post mb6" role="article">
+  <header>
+    <h1 class="post-title flip-project-title">
+      
+        爬取orv并制作epub
+      
+    </h1>
+
+    <div class="post-date">
+      
+      <span class="ellipsis mr1">
+        <time datetime="2022-02-04T00:00:00+08:00">04 Feb 2022</time> in <a href="/blog/" class="flip-title">Blog</a> on <span>Crawler</span>, <a href="/tag-data-analysis/" class="flip-title">Data Analysis</a>
+      </span>
+      
+        
+      
+    </div>
+
+    
+    
+      
+        <div class="img-wrapper lead aspect-ratio sixteen-nine flip-project-img">
+          
+
+
+<img
+  
+    src="/assets/img/blog/orv.jpeg"
+    
+    
+  
+  alt="爬取orv并制作epub"
+  
+  
+  width="864"
+  height="486"
+  loading="lazy"
+/>
+
+        </div>
+      
+      
+    
+
+    
+
+
+
+  
+    <p class="note-sm" >
+      用爬虫爬取外网小说omniscient reader’s view并制作成epub阅读
+
+    </p>
+  
+
+
+  </header>
+
+  
+    <p>快速定位：<a href="#爬虫快速指南">爬虫快速指南</a>
+, <a href="#re匹配正则表达式">re匹配正则表达式</a> 
+, <a href="#爬取过程">爬取过程</a>
+, <a href="#pandoc格式转换">pandoc格式转换</a></p>
+
+<ul class="large-only" id="markdown-toc">
+  <li><a href="#爬虫快速指南" id="markdown-toc-爬虫快速指南">爬虫快速指南</a>    <ul>
+      <li><a href="#1-无条件获取一个get请求" id="markdown-toc-1-无条件获取一个get请求">1. 无条件获取一个get请求</a></li>
+      <li><a href="#2-获取一个post请求" id="markdown-toc-2-获取一个post请求">2. 获取一个post请求</a></li>
+      <li><a href="#3-获取get请求的超时处理" id="markdown-toc-3-获取get请求的超时处理">3. 获取get请求的超时处理</a></li>
+      <li><a href="#4-模拟浏览器的user_agent的post请求" id="markdown-toc-4-模拟浏览器的user_agent的post请求">4. 模拟浏览器的user_agent的post请求</a></li>
+      <li><a href="#5-只模拟浏览器不需要传输表单即data的情形" id="markdown-toc-5-只模拟浏览器不需要传输表单即data的情形">5. 只模拟浏览器，不需要传输表单(即data)的情形</a></li>
+      <li><a href="#6-利用bs进行文本解析" id="markdown-toc-6-利用bs进行文本解析">6. 利用bs进行文本解析</a></li>
+      <li><a href="#7-文档遍历" id="markdown-toc-7-文档遍历">7. 文档遍历</a></li>
+      <li><a href="#8-文档定位" id="markdown-toc-8-文档定位">8. 文档定位</a>        <ul>
+          <li><a href="#find_all" id="markdown-toc-find_all">find_all()</a></li>
+          <li><a href="#kwargs参数" id="markdown-toc-kwargs参数">kwargs参数</a></li>
+          <li><a href="#css选择器" id="markdown-toc-css选择器">CSS选择器</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#re匹配正则表达式" id="markdown-toc-re匹配正则表达式">re匹配正则表达式</a>    <ul>
+      <li><a href="#创建模式对象查找" id="markdown-toc-创建模式对象查找">创建模式对象查找</a></li>
+      <li><a href="#没有模式对象查找匹配" id="markdown-toc-没有模式对象查找匹配">没有模式对象查找匹配</a></li>
+      <li><a href="#模式替换" id="markdown-toc-模式替换">模式替换</a></li>
+    </ul>
+  </li>
+  <li><a href="#爬取过程" id="markdown-toc-爬取过程">爬取过程</a>    <ul>
+      <li><a href="#功能模块" id="markdown-toc-功能模块">功能模块</a></li>
+      <li><a href="#根据url爬取章节数据" id="markdown-toc-根据url爬取章节数据">根据url爬取章节数据</a></li>
+    </ul>
+  </li>
+  <li><a href="#pandoc格式转换" id="markdown-toc-pandoc格式转换">pandoc格式转换</a></li>
+</ul>
+
+<h2 id="爬虫快速指南">爬虫快速指南</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span> <span class="c1">#网页解析，获取数据
+</span><span class="kn">import</span> <span class="nn">re</span>  <span class="c1">#正则表达式，文字匹配
+</span><span class="kn">import</span> <span class="nn">urllib.request</span><span class="p">,</span> <span class="n">urllib</span><span class="p">.</span><span class="n">error</span> <span class="c1">#制定url，获取网页数据
+</span></code></pre></div></div>
+
+<h3 id="1-无条件获取一个get请求">1. 无条件获取一个get请求</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">response</span><span class="o">=</span><span class="n">urllib</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">urlopen</span><span class="p">(</span><span class="s">"http://www.baidu.com"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">read</span><span class="p">().</span><span class="n">decode</span><span class="p">(</span><span class="s">'utf-8'</span><span class="p">))</span> <span class="c1">#对获取到的网页源码进行utf-8源码
+</span></code></pre></div></div>
+
+<h3 id="2-获取一个post请求">2. 获取一个post请求</h3>
+<p>用于模拟浏览器的真实请求，表单后可以填写用户信息</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">urllib.parse</span>
+<span class="n">data</span><span class="o">=</span><span class="nb">bytes</span><span class="p">(</span><span class="n">urllib</span><span class="p">.</span><span class="n">parse</span><span class="p">.</span><span class="n">urlencode</span><span class="p">({</span><span class="s">"name"</span><span class="p">:</span><span class="s">"eric"</span><span class="p">}),</span><span class="n">encoding</span><span class="o">=</span><span class="s">"utf-8"</span><span class="p">)</span>
+<span class="n">response</span><span class="o">=</span><span class="n">urllib</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">urlopen</span><span class="p">(</span><span class="s">"http://httpbin.org/post"</span><span class="p">,</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">read</span><span class="p">().</span><span class="n">decode</span><span class="p">(</span><span class="s">"utf-8"</span><span class="p">))</span>
+</code></pre></div></div>
+
+<h3 id="3-获取get请求的超时处理">3. 获取get请求的超时处理</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span><span class="p">:</span>
+    <span class="n">response</span><span class="o">=</span><span class="n">urllib</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">urlopen</span><span class="p">(</span><span class="s">"http://httpbin.org/get"</span><span class="p">,</span><span class="n">timeout</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">read</span><span class="p">().</span><span class="n">decode</span><span class="p">(</span><span class="s">"utf-8"</span><span class="p">))</span>
+<span class="k">except</span> <span class="n">urllib</span><span class="p">.</span><span class="n">error</span><span class="p">.</span><span class="n">URLError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"time out!"</span><span class="p">)</span>
+
+<span class="n">response</span><span class="o">=</span><span class="n">urllib</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">urlopen</span><span class="p">(</span><span class="s">"http://baidu.com"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">status</span><span class="p">)</span> 
+<span class="c1"># 正常状态200;对豆瓣则显示418错误：代表爬虫已被发现,需要复制浏览器Headers的user-agent
+</span><span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">getheaders</span><span class="p">())</span>
+<span class="c1"># mac操作：command+option+i -&gt; network -&gt; stop -&gt; headers -&gt; user-agent
+# 得到user-agent 
+</span></code></pre></div></div>
+
+<h3 id="4-模拟浏览器的user_agent的post请求">4. 模拟浏览器的user_agent的post请求</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">url</span><span class="o">=</span><span class="s">"http://httpbin.org/post"</span>
+<span class="n">headers</span><span class="o">=</span><span class="p">{</span>
+<span class="s">"user-agent"</span><span class="p">:</span> <span class="s">"[user-agent]"</span>
+<span class="p">}</span>
+<span class="n">req</span><span class="o">=</span><span class="n">urllib</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">Request</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span><span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span><span class="n">method</span><span class="o">=</span><span class="s">"POST"</span><span class="p">)</span> <span class="c1">#构建请求对象
+</span><span class="n">response</span><span class="o">=</span><span class="n">urllib</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">req</span><span class="p">)</span> <span class="c1">#利用对象进行传输获取响应
+</span><span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">read</span><span class="p">().</span><span class="n">decode</span><span class="p">(</span><span class="s">"utf-8"</span><span class="p">))</span>
+</code></pre></div></div>
+
+<h3 id="5-只模拟浏览器不需要传输表单即data的情形">5. 只模拟浏览器，不需要传输表单(即data)的情形</h3>
+<p>用get，如爬取豆瓣</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">url</span><span class="o">=</span><span class="s">"https://www.douban.com"</span>
+<span class="n">headers</span><span class="o">=</span><span class="p">{</span>
+<span class="s">"user-agent"</span><span class="p">:</span> <span class="s">"[user-agent]"</span>
+<span class="p">}</span>
+<span class="n">req</span><span class="o">=</span><span class="n">urllib</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">Request</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span><span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+<span class="n">response</span><span class="o">=</span><span class="n">urllib</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">req</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">read</span><span class="p">().</span><span class="n">decode</span><span class="p">(</span><span class="s">"utf-8"</span><span class="p">))</span>
+</code></pre></div></div>
+<h3 id="6-利用bs进行文本解析">6. 利用bs进行文本解析</h3>
+<p>BeautifulSoup4将html文档转换成一个复杂的树形结构，每个节点都是Python对象，所有对象可以归纳为4种</p>
+<ul>
+  <li>Tag</li>
+  <li>Navigable String</li>
+  <li>Beautiful Soup</li>
+  <li>Comment
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="n">req</span><span class="o">=</span><span class="n">urllib</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">Request</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s">"http://baidu.com"</span><span class="p">,</span><span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+<span class="n">response</span><span class="o">=</span><span class="n">urllib</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">req</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">status</span><span class="p">)</span>
+<span class="n">html</span><span class="o">=</span><span class="n">response</span><span class="p">.</span><span class="n">read</span><span class="p">().</span><span class="n">decode</span><span class="p">(</span><span class="s">"utf-8"</span><span class="p">)</span>
+<span class="n">bs</span><span class="o">=</span><span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html</span><span class="p">,</span><span class="s">"html.parser"</span><span class="p">)</span> <span class="c1">#用html.parser解析器来解析html文档，形成树形结构
+</span><span class="k">print</span><span class="p">(</span><span class="n">bs</span><span class="p">.</span><span class="n">title</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">bs</span><span class="p">.</span><span class="n">title</span><span class="p">))</span>
+<span class="c1">#以上1.Tag 标签及其内容：返回第一个内容
+</span><span class="k">print</span><span class="p">(</span><span class="n">bs</span><span class="p">.</span><span class="n">title</span><span class="p">.</span><span class="n">string</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">bs</span><span class="p">.</span><span class="n">title</span><span class="p">.</span><span class="n">string</span><span class="p">))</span>
+<span class="c1">#以上2.标签里的文字内容（字符串）
+</span><span class="k">print</span><span class="p">(</span><span class="n">bs</span><span class="p">.</span><span class="n">a</span><span class="p">.</span><span class="n">attrs</span><span class="p">)</span> <span class="c1">#字典，可得到a下面class/href等所有的属性
+</span><span class="k">print</span><span class="p">(</span><span class="n">bs</span><span class="p">.</span><span class="n">a</span><span class="p">.</span><span class="n">attrs</span><span class="p">[</span><span class="s">'class'</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">bs</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">bs</span><span class="p">.</span><span class="n">name</span><span class="p">)</span>
+<span class="c1">#以上3.自身类型，表示整个文档
+#内容中有&lt;!--新闻--&gt;时，string的类型是comment，返回值不含注释符号
+#以上4.Comment，是一个特殊的navigableString
+</span></code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="7-文档遍历">7. 文档遍历</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">bs</span><span class="p">.</span><span class="n">head</span><span class="p">.</span><span class="n">contents</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="8-文档定位">8. 文档定位</h3>
+<h4 id="find_all">find_all()</h4>
+<ul>
+  <li>字符串过滤：查找所有与字符串完全匹配的标签（如<a>），而不是第一个
+</a>    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">t_list</span><span class="o">=</span><span class="n">bs</span><span class="p">.</span><span class="n">find_all</span><span class="p">(</span><span class="s">"a"</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li>正则表达式搜索：使用search()方法匹配标签内容
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">re</span>
+<span class="n">t_list</span><span class="o">=</span><span class="n">bs</span><span class="p">.</span><span class="n">find_all</span><span class="p">(</span><span class="n">re</span><span class="p">.</span><span class="nb">compile</span><span class="p">(</span><span class="s">"a"</span><span class="p">))</span>
+</code></pre></div>    </div>
+  </li>
+  <li>方法：传入一个函数，根据函数要求搜索
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">name_is_exists</span><span class="p">(</span><span class="n">tag</span><span class="p">):</span>
+  <span class="k">return</span> <span class="n">tag</span><span class="p">.</span><span class="n">has_attr</span><span class="p">(</span><span class="s">"name"</span><span class="p">)</span>
+<span class="n">t_list</span><span class="o">=</span><span class="n">bs</span><span class="p">.</span><span class="n">find_all</span><span class="p">(</span><span class="n">name_is_exists</span><span class="p">)</span> <span class="c1">#有name属性的所有标签
+</span></code></pre></div>    </div>
+  </li>
+</ul>
+
+<h4 id="kwargs参数">kwargs参数</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">t_list</span><span class="o">=</span><span class="n">bs</span><span class="p">.</span><span class="n">find_all</span><span class="p">(</span><span class="n">href</span><span class="o">=</span><span class="s">"http://new.baidu.com"</span><span class="p">)</span>
+<span class="n">t_list</span><span class="o">=</span><span class="n">bs</span><span class="p">.</span><span class="n">find_all</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s">"head"</span><span class="p">)</span> <span class="c1">#id=head的所有内容
+</span><span class="n">t_list</span><span class="o">=</span><span class="n">bs</span><span class="p">.</span><span class="n">find_all</span><span class="p">(</span><span class="n">class_</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span> <span class="c1">#有class属性的所有内容
+</span><span class="n">t_list</span><span class="o">=</span><span class="n">bs</span><span class="p">.</span><span class="n">find_all</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="p">[</span><span class="s">"hao123"</span><span class="p">,</span><span class="s">"地图"</span><span class="p">,</span><span class="s">"贴吧"</span><span class="p">])</span>
+<span class="c1">#t_list=bs.find_all(text=re.compile("[A-z]\d")) #正则表达式来查找包含特定文本的内容（标签里的字符串）
+</span><span class="n">t_list</span><span class="o">=</span><span class="n">bs</span><span class="p">.</span><span class="n">find_all</span><span class="p">(</span><span class="s">"a"</span><span class="p">,</span><span class="n">limit</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span> <span class="c1">#限制前三个结果
+</span></code></pre></div></div>
+
+<h4 id="css选择器">CSS选择器</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">t_list</span><span class="o">=</span><span class="n">bs</span><span class="p">.</span><span class="n">select</span><span class="p">(</span><span class="s">'title'</span><span class="p">)</span> <span class="c1">#通过标签查找
+</span><span class="n">t_list</span><span class="o">=</span><span class="n">bs</span><span class="p">.</span><span class="n">select</span><span class="p">(</span><span class="s">".mnav"</span><span class="p">)</span> <span class="c1">#按类（class）名查找
+</span><span class="n">t_list</span><span class="o">=</span><span class="n">bs</span><span class="p">.</span><span class="n">select</span><span class="p">(</span><span class="s">"#u1"</span><span class="p">)</span> <span class="c1">#通过Id查找
+</span><span class="n">t_list</span><span class="o">=</span><span class="n">bs</span><span class="p">.</span><span class="n">select</span><span class="p">(</span><span class="s">"a[class='bri']"</span><span class="p">)</span> <span class="c1">#通过属性查找
+</span><span class="n">t_list</span><span class="o">=</span><span class="n">bs</span><span class="p">.</span><span class="n">select</span><span class="p">(</span><span class="s">"link&gt;title"</span><span class="p">)</span> <span class="c1">#通过限定父标签查找
+#t_list=bs.select(".mnav ~ .bri") #通过兄弟节点查找
+</span><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">t_list</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">get_text</span><span class="p">())</span> <span class="c1">#取得文本
+</span></code></pre></div></div>
+
+<h2 id="re匹配正则表达式">re匹配正则表达式</h2>
+<p>正则表达式：字符串模式（判断字符串是否符合一定的标准）</p>
+
+<h3 id="创建模式对象查找">创建模式对象查找</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pat</span><span class="o">=</span><span class="n">re</span><span class="p">.</span><span class="nb">compile</span><span class="p">(</span><span class="s">"AA"</span><span class="p">)</span> <span class="c1">#此处“AA”代表正则表达式，用来验证其他字符串
+</span><span class="n">m</span><span class="o">=</span><span class="n">pat</span><span class="p">.</span><span class="n">search</span><span class="p">(</span><span class="s">"CBA"</span><span class="p">)</span> <span class="c1">#"CBA"为被校验的内容
+#print(m)
+#&gt;&gt;none
+</span><span class="n">m</span><span class="o">=</span><span class="n">pat</span><span class="p">.</span><span class="n">search</span><span class="p">(</span><span class="s">"ABCAA"</span><span class="p">)</span>
+<span class="c1">#print(m)
+#&gt;&gt;&lt;re.Match object; span=(3, 5), match='AA'&gt;
+</span><span class="n">m</span><span class="o">=</span><span class="n">pat</span><span class="p">.</span><span class="n">search</span><span class="p">(</span><span class="s">"ABCAADDCCAAA"</span><span class="p">)</span>
+<span class="c1">#print(m)
+#&gt;&gt;&lt;re.Match object; span=(3, 5), match='AA'&gt;
+#search只返回第一次匹配的位置
+</span></code></pre></div></div>
+
+<h3 id="没有模式对象查找匹配">没有模式对象查找匹配</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">m</span><span class="o">=</span><span class="n">re</span><span class="p">.</span><span class="n">search</span><span class="p">(</span><span class="s">"asd"</span><span class="p">,</span><span class="s">"Aasd"</span><span class="p">)</span> <span class="c1">#前面字符串是模式模板，后面的是被校验的对象
+#print(m)
+#&gt;&gt;&lt;re.Match object; span=(1, 4), match='asd'&gt;
+</span><span class="k">print</span><span class="p">(</span><span class="n">re</span><span class="p">.</span><span class="n">findall</span><span class="p">(</span><span class="s">"a"</span><span class="p">,</span><span class="s">"ASDaDFGAa"</span><span class="p">))</span> <span class="c1">#前为模板，后位被校验字符串
+#&gt;&gt;['a', 'a']
+#findall返回全部符合标准的字符串
+</span><span class="k">print</span><span class="p">(</span><span class="n">re</span><span class="p">.</span><span class="n">findall</span><span class="p">(</span><span class="s">"[A-Z]"</span><span class="p">,</span><span class="s">"ASDaDFGAa"</span><span class="p">))</span>
+<span class="c1">#&gt;&gt;['A', 'S', 'D', 'D', 'F', 'G', 'A']
+</span><span class="k">print</span><span class="p">(</span><span class="n">re</span><span class="p">.</span><span class="n">findall</span><span class="p">(</span><span class="s">"[A-Z]+"</span><span class="p">,</span><span class="s">"ASDaDFGAa"</span><span class="p">))</span>
+<span class="c1">#&gt;&gt;['ASD', 'DFGA']
+</span></code></pre></div></div>
+
+<h3 id="模式替换">模式替换</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">re</span><span class="p">.</span><span class="n">sub</span><span class="p">(</span><span class="s">"a"</span><span class="p">,</span><span class="s">"A"</span><span class="p">,</span><span class="s">"abcdcasd"</span><span class="p">))</span> <span class="c1">#1-被替换对象 2-替换对象 3-原字符串
+#&gt;&gt;AbcdcAsd
+#建议在正则表达式中被比较字符前加上r，避免特殊字符被转义,如
+</span><span class="n">a</span><span class="o">=</span><span class="sa">r</span><span class="s">"\aabd-\'"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="c1">#&gt;&gt;\aabd-\
+</span></code></pre></div></div>
+
+<h2 id="爬取过程">爬取过程</h2>
+
+<h3 id="功能模块">功能模块</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span> <span class="c1">#网页解析，获取数据
+</span><span class="kn">import</span> <span class="nn">re</span>  <span class="c1">#正则表达式，文字匹配
+</span><span class="kn">import</span> <span class="nn">urllib.request</span><span class="p">,</span> <span class="n">urllib</span><span class="p">.</span><span class="n">error</span> <span class="c1">#制定url，获取网页数据
+</span><span class="kn">import</span> <span class="nn">unicodedata</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="c1">#得到指定一个url的网页内容
+</span><span class="k">def</span> <span class="nf">askURL</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+    <span class="n">head</span><span class="o">=</span><span class="p">{</span><span class="s">"user-agent"</span><span class="p">:</span>\
+          <span class="s">"Mozilla/5.0 (Macintosh; </span><span class="se">\
+</span><span class="s">          Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) </span><span class="se">\
+</span><span class="s">          Chrome/103.0.0.0 Safari/537.36"</span>
+<span class="p">}</span>
+    <span class="n">request</span><span class="o">=</span><span class="n">urllib</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">Request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="n">headers</span><span class="o">=</span><span class="n">head</span><span class="p">)</span>
+    <span class="n">html</span><span class="o">=</span><span class="s">""</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">response</span><span class="o">=</span><span class="n">urllib</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+        <span class="n">html</span><span class="o">=</span><span class="n">response</span><span class="p">.</span><span class="n">read</span><span class="p">().</span><span class="n">decode</span><span class="p">(</span><span class="s">"utf-8"</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">urllib</span><span class="p">.</span><span class="n">error</span><span class="p">.</span><span class="n">URLError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">e</span><span class="p">,</span><span class="s">"code"</span><span class="p">):</span>
+            <span class="c1">#错误代码
+</span>            <span class="k">print</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">code</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">e</span><span class="p">,</span><span class="s">"reason"</span><span class="p">):</span>
+            <span class="c1">#未捕获成功的原因
+</span>            <span class="k">print</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">reason</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">html</span>
+
+<span class="c1">#获取章节中的文本
+</span><span class="k">def</span> <span class="nf">getText</span><span class="p">(</span><span class="n">baseurl</span><span class="p">,</span><span class="n">pretitle</span><span class="p">):</span>
+    <span class="n">textlist</span><span class="o">=</span><span class="p">[]</span>
+    <span class="n">html</span><span class="o">=</span><span class="n">askURL</span><span class="p">(</span><span class="n">baseurl</span><span class="p">)</span>
+    <span class="n">bs</span><span class="o">=</span><span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html</span><span class="p">,</span><span class="s">"html.parser"</span><span class="p">)</span>
+    <span class="n">seccontent</span><span class="o">=</span><span class="n">bs</span><span class="p">.</span><span class="n">select</span><span class="p">(</span><span class="s">"div[class='text-left']&gt;p"</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">seccontent</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">i</span><span class="p">.</span><span class="n">script</span><span class="p">:</span>
+            <span class="n">content</span><span class="o">=</span><span class="n">unicodedata</span><span class="p">.</span><span class="n">normalize</span><span class="p">(</span><span class="s">"NFKD"</span><span class="p">,</span> <span class="n">i</span><span class="p">.</span><span class="n">get_text</span><span class="p">().</span><span class="n">strip</span><span class="p">())</span>
+            <span class="c1">#处理md转义字符
+</span>            <span class="n">tmp</span><span class="o">=</span><span class="n">content</span><span class="p">.</span><span class="n">replace</span><span class="p">(</span><span class="s">"#"</span><span class="p">,</span> <span class="s">"\#"</span><span class="p">)</span>
+            <span class="n">content</span><span class="o">=</span><span class="n">tmp</span><span class="p">.</span><span class="n">replace</span><span class="p">(</span><span class="s">"*"</span><span class="p">,</span><span class="s">"\*"</span><span class="p">)</span>
+            <span class="n">tmp</span><span class="o">=</span><span class="n">content</span><span class="p">.</span><span class="n">replace</span><span class="p">(</span><span class="s">"&lt;"</span><span class="p">,</span><span class="s">"\&lt;"</span><span class="p">)</span>
+            <span class="n">content</span><span class="o">=</span><span class="n">tmp</span><span class="p">.</span><span class="n">replace</span><span class="p">(</span><span class="s">"&gt;"</span><span class="p">,</span><span class="s">"\&gt;"</span><span class="p">)</span>
+            <span class="c1">#在章节标题前加一级标题md符号
+</span>            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">textlist</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">re</span><span class="p">.</span><span class="n">findall</span><span class="p">(</span><span class="s">"Episode|Prologue|Epilogue|Chapter"</span><span class="p">,</span><span class="n">content</span><span class="p">,</span><span class="n">flags</span><span class="o">=</span><span class="n">re</span><span class="p">.</span><span class="n">I</span><span class="p">))</span><span class="o">&gt;</span><span class="mi">0</span>\
+            <span class="ow">and</span> <span class="ow">not</span> <span class="s">'TL'</span> <span class="ow">in</span> <span class="n">content</span> <span class="ow">and</span> <span class="ow">not</span> <span class="s">'Early chapters'</span> <span class="ow">in</span> <span class="n">content</span><span class="p">:</span>
+                <span class="n">textlist</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="s">"# "</span><span class="o">+</span><span class="n">content</span><span class="o">+</span><span class="s">'</span><span class="se">\n\n</span><span class="s">'</span><span class="p">)</span>
+                <span class="c1">#f.write("# "+content+'\n\n')
+</span>            <span class="c1">#没有自带标题的情况
+</span>            <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">textlist</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+                <span class="n">textlist</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="s">"# "</span><span class="o">+</span><span class="n">pretitle</span><span class="o">+</span><span class="s">'</span><span class="se">\n\n</span><span class="s">'</span><span class="p">)</span>
+                <span class="n">textlist</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">content</span><span class="o">+</span><span class="s">'</span><span class="se">\n\n</span><span class="s">'</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">textlist</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">content</span><span class="o">+</span><span class="s">'</span><span class="se">\n\n</span><span class="s">'</span><span class="p">)</span>
+                <span class="c1">#f.write(content+'\n\n')
+</span>            <span class="c1">#textlist.append(content)
+</span>    <span class="k">return</span> <span class="n">textlist</span>
+
+<span class="c1">#爬取网页列表中的数据
+</span><span class="k">def</span> <span class="nf">getData</span><span class="p">(</span><span class="n">baseurl</span><span class="p">):</span>
+    <span class="n">pagelist</span><span class="o">=</span><span class="p">[]</span>
+    <span class="n">titlelist</span><span class="o">=</span><span class="p">[]</span>
+    <span class="n">html</span><span class="o">=</span><span class="n">askURL</span><span class="p">(</span><span class="n">baseurl</span><span class="p">)</span> <span class="c1">#保存获取到的网页源码
+</span>    <span class="c1">#逐一解析数据
+</span>    <span class="n">soup</span><span class="o">=</span><span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html</span><span class="p">,</span><span class="s">"html.parser"</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">soup</span><span class="p">.</span><span class="n">find_all</span><span class="p">(</span><span class="s">'li'</span><span class="p">,</span><span class="n">class_</span><span class="o">=</span><span class="s">'wp-manga-chapter'</span><span class="p">):</span>
+        <span class="n">sechtml</span><span class="o">=</span><span class="n">item</span><span class="p">.</span><span class="n">a</span><span class="p">.</span><span class="n">attrs</span><span class="p">[</span><span class="s">'href'</span><span class="p">]</span>
+        <span class="n">sectitle</span><span class="o">=</span><span class="n">item</span><span class="p">.</span><span class="n">a</span><span class="p">.</span><span class="n">get_text</span><span class="p">().</span><span class="n">strip</span><span class="p">()</span>
+        <span class="n">pagelist</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">sechtml</span><span class="p">)</span>
+        <span class="n">titlelist</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">sectitle</span><span class="p">)</span>
+    <span class="n">pagelist</span><span class="p">.</span><span class="n">reverse</span><span class="p">()</span> <span class="c1">#原网页章节排序为倒序
+</span>    <span class="n">titlelist</span><span class="p">.</span><span class="n">reverse</span><span class="p">()</span>
+    <span class="n">contents</span><span class="o">=</span><span class="p">[]</span>
+    <span class="c1">#读取各章节列表
+</span>    <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pagelist</span><span class="p">)):</span>
+        <span class="n">chapter</span><span class="o">=</span><span class="n">pagelist</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+        <span class="n">title</span><span class="o">=</span><span class="n">titlelist</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+        <span class="n">chap</span><span class="o">=</span><span class="n">getText</span><span class="p">(</span><span class="n">chapter</span><span class="p">,</span><span class="n">title</span><span class="p">)</span>
+        <span class="n">contents</span><span class="o">+=</span><span class="n">chap</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">index</span><span class="o">%</span><span class="mi">30</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span> <span class="c1">#每抓取30章休息30秒
+#             break
+</span>            <span class="n">time</span><span class="p">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+    <span class="n">savepath</span><span class="o">=</span><span class="s">"./chapterlist/content.txt"</span>
+    <span class="n">f</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="n">savepath</span><span class="p">,</span><span class="s">"w"</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">contents</span><span class="p">:</span>
+        <span class="n">line</span><span class="o">=</span><span class="n">line</span><span class="p">.</span><span class="n">replace</span><span class="p">(</span><span class="s">'“'</span><span class="p">,</span><span class="s">'</span><span class="se">\"</span><span class="s">'</span><span class="p">)</span>
+        <span class="n">line</span><span class="o">=</span><span class="n">line</span><span class="p">.</span><span class="n">replace</span><span class="p">(</span><span class="s">'”'</span><span class="p">,</span><span class="s">'</span><span class="se">\"</span><span class="s">'</span><span class="p">)</span>
+        <span class="n">f</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="n">f</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">contents</span>
+</code></pre></div></div>
+<h3 id="根据url爬取章节数据">根据url爬取章节数据</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">baseurl</span><span class="o">=</span><span class="s">"https://webnovelonline.net/read/omniscient-readers-viewpoint/"</span>
+<span class="n">datalist</span><span class="o">=</span><span class="n">getData</span><span class="p">(</span><span class="n">baseurl</span><span class="p">)</span>
+</code></pre></div></div>
+<p>爬取的数据已按照MarkDown格式存入<code class="language-plaintext highlighter-rouge">content.txt</code>，为了微调数据，保存datalist变量</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">dill</span>
+<span class="n">filename</span><span class="o">=</span><span class="s">'ovr_variable.pkl'</span>
+</code></pre></div></div>
+
+<h2 id="pandoc格式转换">pandoc格式转换</h2>
+<p>下载封面图片(可以为任意格式）orv.webp, 建立meta文件orvmeta</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># file: `ovrmeta`</span>
+<span class="nt">---</span>
+title: Ominicent Reader’s Viewpoint
+<span class="nt">---</span>
+</code></pre></div></div>
+<p>运行pandoc</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pandoc <span class="nt">-f</span> gfm <span class="nt">-s</span> <span class="nt">--toc</span> ./chapterlist/<span class="k">*</span>.txt <span class="nt">--metadata-file</span><span class="o">=</span>orvmeta <span class="nt">--epub-cover-image</span><span class="o">=</span>orv.webp <span class="nt">-o</span> orv.epub
+</code></pre></div></div>
+
+<p><img src="/assets/img/blog/blurred_orv.png" alt="Full-width image" /></p>
+
+  
+</article>
+
+
+
+  <hr class="dingbat related mb6" />
+
+
+
+
+
+
+  
+     
+
+
+  <aside class="about related mt4 mb4" role="complementary">
+    
+    
+
+<div class="author mt4">
+  
+
+  
+    
+
+
+<img
+  
+    src="/assets/img/me.jpeg"
+    srcset="/assets/img/me.jpeg 1x,/assets/img/me.jpeg 2x"
+    
+  
+  alt="Kexin Guo"
+  class="avatar"
+  
+  width="120"
+  height="120"
+  loading="lazy"
+/>
+
+  
+
+  
+  
+  <h2  class="page-title hr-bottom">
+    About
+  </h2>
+
+  <p>Hi, I am a data analyst with 3-year experience in China IT Industry.</p>
+
+<p>Before the career transition, I was an astrophysicist, 
+focusing on galaxy evolution based on large-sample statistical analysis.</p>
+
+<p>I am also an amateur in Japanese translation. 
+I like listening to music and swimming in my idle time.</p>
+
+<p class="faded">本主页为2022年gap期间建立，期间又重复自学了很多东西，尽可能在遗忘前记录于此，在精不在多
+但中英混杂，有时可能不易阅读，更显露出才疏学浅，怠于整理。若有错处还请不吝赐教
+<a href="/assets/files/gh_resume.pdf"><em>简历在此</em></a></p>
+
+
+  <div class="sidebar-social">
+    <span class="sr-only">Social:</span>
+<ul>
+  
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://twitter.com/raintuner" title="Twitter" class="no-mark-external">
+      <span class="icon-twitter"></span>
+      <span class="sr-only">Twitter</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://github.com/kxguo" title="GitHub" class="no-mark-external">
+      <span class="icon-github"></span>
+      <span class="sr-only">GitHub</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="mailto:<kxguo@pku.edu.cn>" title="Email" class="no-mark-external">
+      <span class="icon-mail"></span>
+      <span class="sr-only">Email</span>
+    </a>
+  </li>
+
+
+    
+  
+</ul>
+
+  </div>
+</div>
+
+  </aside>
+
+
+  
+
+  
+  
+
+  
+    
+
+
+  <aside class="related mb4" role="complementary">  <h2 class="hr-bottom">Related Posts</h2>  <ul class="related-posts">                  <li class="h4">  <a href="/blog/2022-08-27-google_rel/" class="flip-title"><span>Google Cloud 部署和data studio可视化相关</span></a>  <time class="faded fine" datetime="2022-08-27T00:00:00+08:00">27 Aug 2022</time></li>                        <li class="h4">  <a href="/blog/2022-08-04-sql_notes/" class="flip-title"><span>SQL Notes</span></a>  <time class="faded fine" datetime="2022-08-04T00:00:00+08:00">04 Aug 2022</time></li>            </ul></aside>
+
+  
+
+  
+  
+
+  
+    
+
+  
+
+
+  
+<footer class="content" role="contentinfo">
+  <hr/>
+  
+    <p><small class="copyright">© 2021. All rights reserved.
+</small></p>
+  
+  
+    <nav class="legal"><small>
+    
+      
+      <a class="heading flip-title" href="/LICENSE/">LICENSE</a>
+      |
+    
+      
+      <a class="heading flip-title" href="/NOTICE/">NOTICE</a>
+      |
+    
+      
+      <a class="heading flip-title" href="/CHANGELOG/">CHANGELOG</a>
+      
+    
+    </small></nav>
+  
+    <p><small>Powered by <a class="external" href="https://hydejack.com/">Hydejack</a> v<span id="_version">9.1.6</span></small></p>
+  <hr class="sr-only"/>
+</footer>
+
+
+</main>
+
+  <hy-drawer
+  id="_drawer"
+  class=""
+  side="left"
+  threshold="10"
+  noscroll
+  
+>
+  <header id="_sidebar" class="sidebar" role="banner">
+    
+
+
+
+
+<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+
+    <div class="sidebar-sticky">
+  <div class="sidebar-about">
+    
+      <a class="no-hover" href="/" tabindex="-1">
+        <img src="/assets/img/logo.png" class="avatar" alt="Kexin Guo" width="120" height="120" loading="lazy" />
+      </a>
+    
+    <a class="sidebar-title" href="/"><h2 class="h1">Kexin Guo</h2></a>
+    
+    
+      <p class="">
+        Never Settle
+
+      </p>
+    
+  </div>
+
+  <nav class="sidebar-nav heading" role="navigation">
+    <span class="sr-only">Navigation:</span>
+<ul>
+  
+    
+      
+      <li>
+        <a
+          id="_drawer--opened"
+          href="/notes/"
+          class="sidebar-nav-item "
+          
+        >
+          Some Notes
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/astro/"
+          class="sidebar-nav-item "
+          
+        >
+          Academia Legacy
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/about/"
+          class="sidebar-nav-item "
+          
+        >
+          About
+        </a>
+      </li>
+    
+  
+</ul>
+
+  </nav>
+
+  
+  <div class="sidebar-social">
+    <span class="sr-only">Social:</span>
+<ul>
+  
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://twitter.com/raintuner" title="Twitter" class="no-mark-external">
+      <span class="icon-twitter"></span>
+      <span class="sr-only">Twitter</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://github.com/kxguo" title="GitHub" class="no-mark-external">
+      <span class="icon-github"></span>
+      <span class="sr-only">GitHub</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="mailto:<kxguo@pku.edu.cn>" title="Email" class="no-mark-external">
+      <span class="icon-mail"></span>
+      <span class="sr-only">Email</span>
+    </a>
+  </li>
+
+
+    
+  
+</ul>
+
+  </div>
+</div>
+  </header>
+</hy-drawer>
+<hr class="sr-only" hidden />
+
+</hy-push-state>
+
+
+  <!--[if gt IE 10]><!---->
+  <script nomodule>!function(){var t,n=document.createElement("script");!("noModule"in n)&&"onbeforeload"in n&&(t=!1,document.addEventListener("beforeload",function(e){if(e.target===n)t=!0;else if(!e.target.hasAttribute("nomodule")||!t)return;e.preventDefault()},!0),n.type="module",n.src=".",document.head.appendChild(n),n.remove())}();
+</script>
+  <script src="/assets/js/hydejack-9.1.6.js" type="module"></script>
+  <script src="/assets/js/LEGACY-hydejack-9.1.6.js" nomodule defer></script>
+  
+
+  
+  <script>!function(w, d) {
+    w.ga=w.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+
+    /**/
+      ga('create', 'UA-238810119-1', 'auto');
+    /**/
+
+    var pushStateEl = d.getElementById('_pushState');
+    var timeoutId;
+    pushStateEl.addEventListener('hy-push-state-load', function() {
+      w.clearTimeout(timeoutId);
+      timeoutId = w.setTimeout(function() {
+        ga('set', 'page', w.location.pathname);
+        ga('send', 'pageview');
+      }, 500);
+    });
+
+    d.addEventListener('hy--cookies-ok', function () {
+      w.ga(function(tracker) {
+        w.ga("set", "anonymizeIp", undefined);
+        localStorage && localStorage.setItem("ga--client-id", tracker.get("clientId"));
+      });
+    });
+
+    w.loadJSDeferred('https://www.google-analytics.com/analytics.js');
+  }(window, document);</script>
+
+
+<!--<![endif]-->
+  <!-- <script>
+  document.querySelector('hy-push-state').setAttribute('prefetch', '');
+
+  document.querySelectorAll('.sidebar a[href^="/"]').forEach(function (el) { 
+    el.addEventListener('click', function (e) {
+      if (el.pathname === window.location.pathname) {
+        e.preventDefault();
+        e.stopPropagation();
+        document.querySelector('hy-drawer').close();
+      }
+    });
+  });
+</script> -->
+
+<!--
+Code for integrating CloudFlare's email protection with Hydejack's single page app loading.
+-->
+<script>
+  document.getElementById('_pushState').addEventListener('hy-push-state-after', function (e) {
+    function e(e){
+      (console.error?console.error:console.log).call(console,e)
+    }
+
+    function t(e){
+      return l.innerHTML='<a href="'+e.replace(/"/g,"&quot;")+'"></a>',l.childNodes[0].getAttribute("href")
+    }
+
+    function r(e,t){
+      var r=e.substr(t,2);return parseInt(r,16)
+    }
+
+    function n(e,n){
+      for(var o="",c=r(e,n),a=n+2;a<e.length;a+=2){
+        var l=r(e,a)^c;
+        o+=String.fromCharCode(l)
+      }
+      return t(o)
+    }
+
+    var o="/cdn-cgi/l/email-protection#",
+        c=".__cf_email__",
+        a="data-cfemail",
+        l=document.createElement("div");
+
+    !function(){
+      for(var t=document.getElementsByTagName("a"),r=0;r<t.length;r++)
+        try{
+          var c=t[r],a=c.href.indexOf(o);
+          a>-1&&(c.href="mailto:"+n(c.href,a+o.length))
+        }catch(t){
+          e(t)
+        }
+    }(),
+    function(){
+      for(var t=document.querySelectorAll(c),r=0;r<t.length;r++)
+        try{
+          var o=t[r],l=n(o.getAttribute(a),0),i=document.createTextNode(l);
+          o.parentNode.replaceChild(i,o)
+        }catch(t){
+          e(t)
+        }
+    }()
+  });
+</script>
+
+
+
+
+
+<div hidden>
+  
+  <h2 class="sr-only">Templates (for web app):</h2>
+
+  <template id="_animation-template">
+  <div class="animation-main fixed-top">
+    <nav id="breadcrumbs" class="screen-only"><ul>
+  
+  
+</ul></nav>
+    <div class="content">
+      <div class="page"></div>
+    </div>
+  </div>
+</template>
+
+  <template id="_loading-template">
+  <div class="loading nav-btn fr">
+    <span class="sr-only">Loading…</span>
+    <span class="icon-cog"></span>
+  </div>
+</template>
+
+  <template id="_error-template">
+  <div class="page">
+    <h1 class="page-title">Error</h1>
+    
+    
+    <p class="lead">
+      Sorry, an error occurred while loading <a class="this-link" href=""></a>.
+
+    </p>
+  </div>
+</template>
+
+  <template id="_permalink-template">
+  <a href="#" class="permalink">
+    <span class="sr-only">Permalink</span>
+    <span class="content-hash"></span>
+  </a>
+</template>
+
+</div>
+
+
+</body>
+</html>
