@@ -24,6 +24,7 @@ The intrinsic scatter is larger in higher-mass galaxies
 , indicating that the evolution massive galaxies undergoes is more violent compared to their lower-mass counterparts
 ![Full-width image](/assets/img/blog/ssfr_dis.png)
 
+
 Continue with [Decomposed Observation](ifu.md){:.heading.flip-title}
 {:.read-more}
 

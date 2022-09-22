@@ -28,4 +28,8 @@
 <url>
 <loc>http://localhost:4000/licenses/</loc>
 </url>
+<url>
+<loc>http://localhost:4000/assets/files/gh_resume.pdf</loc>
+<lastmod>2022-09-22T16:48:31+08:00</lastmod>
+</url>
 </urlset>
