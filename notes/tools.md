@@ -1,10 +1,9 @@
 ---
 layout: page
-title: Some Notes
+title: Some Notes of Tools
 description: >
 hide_description: true
 sitemap: false
-permalink: /notes/
 ---
 
 这里记录了一些小工具的快速实现命令和问题解决方案

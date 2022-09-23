@@ -32,22 +32,21 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   
     
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Example | Kexin Guo</title>
+<title>Some Notes of Tools | Kexin Guo</title>
 <meta name="generator" content="Jekyll v3.9.2" />
-<meta property="og:title" content="Example" />
+<meta property="og:title" content="Some Notes of Tools" />
 <meta name="author" content="Kexin Guo" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="This is a featured category, which have their own page. Check out _featured_tags/example.md to learn how to create your own." />
-<meta property="og:description" content="This is a featured category, which have their own page. Check out _featured_tags/example.md to learn how to create your own." />
-<link rel="canonical" href="http://localhost:4000/example/" />
-<meta property="og:url" content="http://localhost:4000/example/" />
+<meta name="description" content="This website is constructed with the Jekyll theme Hydejack. Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress." />
+<meta property="og:description" content="This website is constructed with the Jekyll theme Hydejack. Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress." />
+<link rel="canonical" href="http://localhost:4000/notes/tools/" />
+<meta property="og:url" content="http://localhost:4000/notes/tools/" />
 <meta property="og:site_name" content="Kexin Guo" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-09-23T18:46:31+08:00" />
+<meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Example" />
+<meta property="twitter:title" content="Some Notes of Tools" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Kexin Guo"},"dateModified":"2022-09-23T18:46:31+08:00","datePublished":"2022-09-23T18:46:31+08:00","description":"This is a featured category, which have their own page. Check out _featured_tags/example.md to learn how to create your own.","headline":"Example","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/logo.png"},"name":"Kexin Guo"},"url":"http://localhost:4000/example/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Kexin Guo"},"description":"This website is constructed with the Jekyll theme Hydejack. Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.","headline":"Some Notes of Tools","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/logo.png"},"name":"Kexin Guo"},"url":"http://localhost:4000/notes/tools/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -75,7 +74,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 <meta name="generator" content="Hydejack v9.1.6" />
 
 
-<link rel="alternate" href="http://localhost:4000/example/" hreflang="en">
+<link rel="alternate" href="http://localhost:4000/notes/tools/" hreflang="en">
 
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Kexin Guo" />
 
@@ -178,7 +177,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 
   <main
   id="_main"
-  class="content layout-list"
+  class="content layout-page"
   role="main"
 >
   <nav id="breadcrumbs" class="screen-only"><ul>
@@ -189,7 +188,16 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
       <li>
         
           <span>/</span>
-          <span>example</span>
+          
+          
+          <a href="/notes/">notes</a>
+        
+      </li>
+    
+      <li>
+        
+          <span>/</span>
+          <span>tools</span>
         
       </li>
     
@@ -197,73 +205,71 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 </ul></nav>
   <article class="page mb6" role="article">
   <header>
-    <h1 class="page-title">Example</h1>
+    <h1 class="page-title">Some Notes of Tools</h1>
     
 
 
 
-  
-    <p class="note-sm" >
-      This is a featured category, which have their own page. Check out <code class="language-plaintext highlighter-rouge">_featured_tags/example.md</code> to learn how to create your own.
-
-    </p>
-  
+  <div class="hr pb0"></div>
 
 
   </header>
 
-  
+  <p>这里记录了一些小工具的快速实现命令和问题解决方案</p>
 
+<ol id="markdown-toc">
+  <li><a href="#科学上网" id="markdown-toc-科学上网">科学上网</a>    <ol>
+      <li><a href="#shell设置" id="markdown-toc-shell设置">shell设置</a></li>
+    </ol>
+  </li>
+  <li><a href="#image-magic" id="markdown-toc-image-magic">Image Magic</a>    <ol>
+      <li><a href="#mac无法执行display" id="markdown-toc-mac无法执行display">mac无法执行display</a></li>
+      <li><a href="#查看图片大小分辨率等信息" id="markdown-toc-查看图片大小分辨率等信息">查看图片大小分辨率等信息</a></li>
+      <li><a href="#缩小图片并切割同时转移重心" id="markdown-toc-缩小图片并切割同时转移重心">缩小图片并切割同时转移重心</a></li>
+      <li><a href="#从中心切割为圆形" id="markdown-toc-从中心切割为圆形">从中心切割为圆形</a></li>
+      <li><a href="#制作gif" id="markdown-toc-制作gif">制作gif</a></li>
+      <li><a href="#模糊图像" id="markdown-toc-模糊图像">模糊图像</a></li>
+    </ol>
+  </li>
+</ol>
 
+<h2 id="科学上网">科学上网</h2>
+<h3 id="shell设置">shell设置</h3>
+<p>ShadowsocksX-NG、v2rayU等客户端工具的全局或PAC模式只能用于浏览器, 要在shell中实现翻墙需要将监听端口信息（这里为1087）写入环境变量</p>
 
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># file: `.zshrc`</span>
+<span class="nb">export </span><span class="nv">http_proxy</span><span class="o">=</span>http://127.0.0.1:1087
+<span class="nb">export </span><span class="nv">https_proxy</span><span class="o">=</span>http://127.0.0.1:1087
+</code></pre></div></div>
 
-
-
-
-
-
-
-
-  
-  
-    
-    <h2 id="y-2022" class="hr-bottom">2022</h2>
-    <ul class="related-posts">
-    
-  
-  
-
-
-<li class="h4">
-  <a href="/blog/2022-08-27-google_rel/" class="flip-title"><span>Google Cloud 部署和data studio可视化相关</span></a>
-  <time class="faded fine" datetime="2022-08-27T00:00:00+08:00">27 Aug</time>
-</li>
-
-  
-
-  
-  
-  
-
-
-<li class="h4">
-  <a href="/blog/2022-08-04-sql_notes/" class="flip-title"><span>SQL Notes</span></a>
-  <time class="faded fine" datetime="2022-08-04T00:00:00+08:00">04 Aug</time>
-</li>
-
-  
-
-  
-  
-  
-
-
-<li class="h4">
-  <a href="/blog/2022-02-04-crawler/" class="flip-title"><span>爬取orv并制作epub</span></a>
-  <time class="faded fine" datetime="2022-02-04T00:00:00+08:00">04 Feb</time>
-</li>
-
-  </ul>
+<h2 id="image-magic">Image Magic</h2>
+<h3 id="mac无法执行display">mac无法执行display</h3>
+<p>需要重新安装imagemagick和xquartz, 来自<a href="https://github.com/tlk/homebrew-imagemagick-x11">homebrew-imagemagick-x11</a></p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew uninstall imagemagick <span class="c"># without X11 support</span>
+brew <span class="nb">install</span> <span class="nt">--cask</span> xquartz
+brew <span class="nb">install </span>tlk/imagemagick-x11/imagemagick <span class="nt">--with-graphviz</span>
+</code></pre></div></div>
+<h3 id="查看图片大小分辨率等信息">查看图片大小分辨率等信息</h3>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>identify icrar_pic.jpeg
+</code></pre></div></div>
+<h3 id="缩小图片并切割同时转移重心">缩小图片并切割同时转移重心</h3>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>convert icrar_pic.jpeg <span class="nt">-resize</span> 500x500 <span class="nt">-gravity</span> center <span class="nt">-crop</span> 256x256+0-85 input.png
+<span class="c">#注1:resize并不会强行改变比例</span>
+<span class="c">#注2:(0,-85)为从左上角开始的横向和纵向裁剪位置</span>
+</code></pre></div></div>
+<h3 id="从中心切割为圆形">从中心切割为圆形</h3>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>convert input.png <span class="s1">'('</span> +clone <span class="nt">-alpha</span> transparent <span class="nt">-draw</span> <span class="s1">'circle 150,150 150,0'</span> <span class="s1">')'</span> <span class="nt">-compose</span> copyopacity <span class="nt">-composite</span> out.png
+</code></pre></div></div>
+<h3 id="制作gif">制作gif</h3>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>convert <span class="nt">-delay</span> 20 F_<span class="k">*</span>.png <span class="nt">-loop</span> 0 movie.gif
+<span class="c">#注:-loop 0代表"play forever"</span>
+convert <span class="nt">-delay</span> 20 F_<span class="k">*</span>.png <span class="nt">-loop</span> 0 miff:- | convert - animation.avi
+<span class="c">#可以转换成其他格式播放</span>
+</code></pre></div></div>
+<h3 id="模糊图像">模糊图像</h3>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>convert source.png <span class="nt">-channel</span> RGBA <span class="nt">-blur</span> 0x8 blurred.png
+</code></pre></div></div>
+<!--- Continue with [Scripts](scripts.md){:.heading.flip-title}-->
 
 
 </article>

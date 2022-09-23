@@ -32,21 +32,21 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   
     
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Some Notes | Kexin Guo</title>
+<title>Python画图笔记 | Kexin Guo</title>
 <meta name="generator" content="Jekyll v3.9.2" />
-<meta property="og:title" content="Some Notes" />
+<meta property="og:title" content="Python画图笔记" />
 <meta name="author" content="Kexin Guo" />
 <meta property="og:locale" content="en" />
 <meta name="description" content="This website is constructed with the Jekyll theme Hydejack. Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress." />
 <meta property="og:description" content="This website is constructed with the Jekyll theme Hydejack. Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress." />
-<link rel="canonical" href="http://localhost:4000/notes/" />
-<meta property="og:url" content="http://localhost:4000/notes/" />
+<link rel="canonical" href="http://localhost:4000/notes/notes_plot/" />
+<meta property="og:url" content="http://localhost:4000/notes/notes_plot/" />
 <meta property="og:site_name" content="Kexin Guo" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Some Notes" />
+<meta property="twitter:title" content="Python画图笔记" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Kexin Guo"},"description":"This website is constructed with the Jekyll theme Hydejack. Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.","headline":"Some Notes","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/logo.png"},"name":"Kexin Guo"},"url":"http://localhost:4000/notes/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Kexin Guo"},"description":"This website is constructed with the Jekyll theme Hydejack. Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.","headline":"Python画图笔记","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/logo.png"},"name":"Kexin Guo"},"url":"http://localhost:4000/notes/notes_plot/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -74,7 +74,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 <meta name="generator" content="Hydejack v9.1.6" />
 
 
-<link rel="alternate" href="http://localhost:4000/notes/" hreflang="en">
+<link rel="alternate" href="http://localhost:4000/notes/notes_plot/" hreflang="en">
 
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Kexin Guo" />
 
@@ -111,7 +111,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2022-09-23T13:26:12+08:00',
+    INDEX_KEY: 'index--2022-09-23T18:46:31+08:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -188,7 +188,16 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
       <li>
         
           <span>/</span>
-          <span>notes</span>
+          
+          
+          <a href="/notes/">notes</a>
+        
+      </li>
+    
+      <li>
+        
+          <span>/</span>
+          <span>notes_plot</span>
         
       </li>
     
@@ -196,7 +205,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 </ul></nav>
   <article class="page mb6" role="article">
   <header>
-    <h1 class="page-title">Some Notes</h1>
+    <h1 class="page-title">Python画图笔记</h1>
     
 
 
@@ -206,60 +215,40 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 
   </header>
 
-  <p>这里记录了一些小工具的快速实现命令和问题解决方案</p>
+  <p>这里记录了一些画图模块</p>
 
 <ol id="markdown-toc">
-  <li><a href="#科学上网" id="markdown-toc-科学上网">科学上网</a>    <ol>
-      <li><a href="#shell设置" id="markdown-toc-shell设置">shell设置</a></li>
-    </ol>
-  </li>
-  <li><a href="#image-magic" id="markdown-toc-image-magic">Image Magic</a>    <ol>
-      <li><a href="#mac无法执行display" id="markdown-toc-mac无法执行display">mac无法执行display</a></li>
-      <li><a href="#查看图片大小分辨率等信息" id="markdown-toc-查看图片大小分辨率等信息">查看图片大小分辨率等信息</a></li>
-      <li><a href="#缩小图片并切割同时转移重心" id="markdown-toc-缩小图片并切割同时转移重心">缩小图片并切割同时转移重心</a></li>
-      <li><a href="#从中心切割为圆形" id="markdown-toc-从中心切割为圆形">从中心切割为圆形</a></li>
-      <li><a href="#制作gif" id="markdown-toc-制作gif">制作gif</a></li>
-      <li><a href="#模糊图像" id="markdown-toc-模糊图像">模糊图像</a></li>
+  <li><a href="#直方图" id="markdown-toc-直方图">直方图</a>    <ol>
+      <li><a href="#seaborn画帕累托图" id="markdown-toc-seaborn画帕累托图">seaborn画帕累托图</a></li>
     </ol>
   </li>
 </ol>
 
-<h2 id="科学上网">科学上网</h2>
-<h3 id="shell设置">shell设置</h3>
-<p>ShadowsocksX-NG、v2rayU等客户端工具的全局或PAC模式只能用于浏览器, 要在shell中实现翻墙需要将监听端口信息（这里为1087）写入环境变量</p>
+<h2 id="直方图">直方图</h2>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># file: `.zshrc`</span>
-<span class="nb">export </span><span class="nv">http_proxy</span><span class="o">=</span>http://127.0.0.1:1087
-<span class="nb">export </span><span class="nv">https_proxy</span><span class="o">=</span>http://127.0.0.1:1087
-</code></pre></div></div>
+<h3 id="seaborn画帕累托图">seaborn画帕累托图</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">matplotlib.ticker</span> <span class="k">as</span> <span class="n">mtick</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="n">sns</span>
 
-<h2 id="image-magic">Image Magic</h2>
-<h3 id="mac无法执行display">mac无法执行display</h3>
-<p>需要重新安装imagemagick和xquartz, 来自<a href="https://github.com/tlk/homebrew-imagemagick-x11">homebrew-imagemagick-x11</a></p>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew uninstall imagemagick <span class="c"># without X11 support</span>
-brew <span class="nb">install</span> <span class="nt">--cask</span> xquartz
-brew <span class="nb">install </span>tlk/imagemagick-x11/imagemagick <span class="nt">--with-graphviz</span>
+<span class="n">sns</span><span class="p">.</span><span class="n">set_theme</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s">"whitegrid"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">=</span><span class="n">sns</span><span class="p">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">.</span><span class="n">profit</span><span class="o">&gt;</span><span class="mf">0.01</span><span class="p">],</span> <span class="n">x</span><span class="o">=</span><span class="s">"profit"</span><span class="p">,</span><span class="n">log_scale</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="n">binwidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span><span class="n">edgecolor</span><span class="o">=</span><span class="s">"w"</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">set_xticks</span><span class="p">([</span><span class="mf">1e-3</span><span class="p">,</span><span class="mf">1e-2</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">1000</span><span class="p">,</span><span class="mf">1e4</span><span class="p">,</span><span class="mf">1e5</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">set_xlim</span><span class="p">([</span><span class="mf">1e-3</span><span class="p">,</span><span class="mf">1e5</span><span class="p">])</span>
+<span class="c1">#add percentage labels
+</span><span class="n">label_data</span><span class="o">=</span><span class="n">ax</span><span class="p">.</span><span class="n">containers</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">datavalues</span><span class="o">/</span><span class="nb">sum</span><span class="p">(</span><span class="n">ax</span><span class="p">.</span><span class="n">containers</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">datavalues</span><span class="p">)</span><span class="o">*</span><span class="mi">1</span>
+<span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="sa">f</span><span class="s">'</span><span class="si">{</span><span class="n">v</span><span class="o">*</span><span class="mi">100</span><span class="p">:</span><span class="mf">0.1</span><span class="n">f</span><span class="si">}</span><span class="s">%'</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">label_data</span><span class="p">]</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">bar_label</span><span class="p">(</span><span class="n">ax</span><span class="p">.</span><span class="n">containers</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">labels</span><span class="o">=</span><span class="n">labels</span><span class="p">)</span>
+<span class="c1">#turn minor tick off on x-axis
+</span><span class="n">ax</span><span class="p">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s">'x'</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s">'minor'</span><span class="p">,</span> <span class="n">bottom</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mf">1e5</span><span class="p">])</span>
+<span class="n">ax2</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">twinx</span><span class="p">()</span>
+<span class="n">ax2</span><span class="o">=</span><span class="n">sns</span><span class="p">.</span><span class="n">ecdfplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s">"profit"</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s">"orange"</span><span class="p">)</span>
+<span class="c1">#format the 2nd y-axis in percentage
+</span><span class="n">vals</span> <span class="o">=</span> <span class="n">ax2</span><span class="p">.</span><span class="n">get_yticks</span><span class="p">()</span>
+<span class="n">ax2</span><span class="p">.</span><span class="n">set_yticklabels</span><span class="p">([</span><span class="s">'{:,.0%}'</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">vals</span><span class="p">])</span>
 </code></pre></div></div>
-<h3 id="查看图片大小分辨率等信息">查看图片大小分辨率等信息</h3>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>identify icrar_pic.jpeg
-</code></pre></div></div>
-<h3 id="缩小图片并切割同时转移重心">缩小图片并切割同时转移重心</h3>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>convert icrar_pic.jpeg <span class="nt">-resize</span> 500x500 <span class="nt">-gravity</span> center <span class="nt">-crop</span> 256x256+0-85 input.png
-<span class="c">#注1:resize并不会强行改变比例</span>
-<span class="c">#注2:(0,-85)为从左上角开始的横向和纵向裁剪位置</span>
-</code></pre></div></div>
-<h3 id="从中心切割为圆形">从中心切割为圆形</h3>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>convert input.png <span class="s1">'('</span> +clone <span class="nt">-alpha</span> transparent <span class="nt">-draw</span> <span class="s1">'circle 150,150 150,0'</span> <span class="s1">')'</span> <span class="nt">-compose</span> copyopacity <span class="nt">-composite</span> out.png
-</code></pre></div></div>
-<h3 id="制作gif">制作gif</h3>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>convert <span class="nt">-delay</span> 20 F_<span class="k">*</span>.png <span class="nt">-loop</span> 0 movie.gif
-<span class="c">#注:-loop 0代表"play forever"</span>
-convert <span class="nt">-delay</span> 20 F_<span class="k">*</span>.png <span class="nt">-loop</span> 0 miff:- | convert - animation.avi
-<span class="c">#可以转换成其他格式播放</span>
-</code></pre></div></div>
-<h3 id="模糊图像">模糊图像</h3>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>convert source.png <span class="nt">-channel</span> RGBA <span class="nt">-blur</span> 0x8 blurred.png
-</code></pre></div></div>
+<p><img src="/assets/img/blog/cumhist.png" alt="Full-width image" /></p>
+
 <!--- Continue with [Scripts](scripts.md){:.heading.flip-title}-->
 
 
