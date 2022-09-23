@@ -2,11 +2,10 @@
 layout: page
 title: Some Notes of Tools
 description: >
-hide_description: true
+  这里记录了一些小工具的快速实现命令和问题解决方案
+hide_description: false
 sitemap: false
 ---
-
-这里记录了一些小工具的快速实现命令和问题解决方案
 
 1. 列表（占位作用）
 {:toc}
@@ -54,7 +53,9 @@ convert -delay 20 F_*.png -loop 0 miff:- | convert - animation.avi
 ~~~shell
 convert source.png -channel RGBA -blur 0x8 blurred.png
 ~~~
-<!--- Continue with [Scripts](scripts.md){:.heading.flip-title}-->
+
+Continue with [Python Plots](notes_plot.md){:.heading.flip-title}
 {:.read-more}
 
+Back to [Some Notes](README.md){:.heading.flip-title}
 

@@ -37,8 +37,8 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 <meta property="og:title" content="Python画图笔记" />
 <meta name="author" content="Kexin Guo" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="This website is constructed with the Jekyll theme Hydejack. Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress." />
-<meta property="og:description" content="This website is constructed with the Jekyll theme Hydejack. Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress." />
+<meta name="description" content="这里记录了一些画图模块" />
+<meta property="og:description" content="这里记录了一些画图模块" />
 <link rel="canonical" href="http://localhost:4000/notes/notes_plot/" />
 <meta property="og:url" content="http://localhost:4000/notes/notes_plot/" />
 <meta property="og:site_name" content="Kexin Guo" />
@@ -46,7 +46,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Python画图笔记" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Kexin Guo"},"description":"This website is constructed with the Jekyll theme Hydejack. Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.","headline":"Python画图笔记","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/logo.png"},"name":"Kexin Guo"},"url":"http://localhost:4000/notes/notes_plot/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Kexin Guo"},"description":"这里记录了一些画图模块","headline":"Python画图笔记","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/logo.png"},"name":"Kexin Guo"},"url":"http://localhost:4000/notes/notes_plot/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -111,7 +111,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2022-09-23T18:54:34+08:00',
+    INDEX_KEY: 'index--2022-09-24T07:44:33+08:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -210,21 +210,21 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 
 
 
-  <div class="hr pb0"></div>
+  
+    <p class="note-sm" >
+      这里记录了一些画图模块
+
+    </p>
+  
 
 
   </header>
 
-  <p>这里记录了一些画图模块</p>
-
-<ol id="markdown-toc">
-  <li><a href="#直方图" id="markdown-toc-直方图">直方图</a>    <ol>
-      <li><a href="#seaborn画帕累托图" id="markdown-toc-seaborn画帕累托图">seaborn画帕累托图</a></li>
-    </ol>
-  </li>
+  <ol id="markdown-toc">
+  <li><a href="#seaborn画帕累托图" id="markdown-toc-seaborn画帕累托图">seaborn画帕累托图</a></li>
+  <li><a href="#散点等密度图" id="markdown-toc-散点等密度图">散点等密度图</a></li>
+  <li><a href="#上色散点图两侧叠加密度histogram" id="markdown-toc-上色散点图两侧叠加密度histogram">上色散点图两侧叠加密度histogram</a></li>
 </ol>
-
-<h2 id="直方图">直方图</h2>
 
 <h3 id="seaborn画帕累托图">seaborn画帕累托图</h3>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">matplotlib.ticker</span> <span class="k">as</span> <span class="n">mtick</span>
@@ -249,7 +249,68 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 </code></pre></div></div>
 <p><img src="/assets/img/blog/cumhist.png" alt="Full-width image" /></p>
 
-<!--- Continue with [Scripts](scripts.md){:.heading.flip-title}-->
+<h3 id="散点等密度图">散点等密度图</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="p">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">nondata</span><span class="p">.</span><span class="n">cospa</span><span class="p">,</span><span class="n">nondata</span><span class="p">.</span><span class="n">profit</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span><span class="n">s</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">cospa</span><span class="p">,</span><span class="n">data</span><span class="p">.</span><span class="n">profit</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span><span class="n">s</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">legend</span><span class="p">([</span><span class="s">'non-data'</span><span class="p">,</span><span class="s">'data'</span><span class="p">])</span>
+
+<span class="c1">#countor plot
+</span><span class="n">nbins</span><span class="o">=</span><span class="mi">30</span>
+<span class="n">k</span><span class="o">=</span><span class="n">kde</span><span class="p">.</span><span class="n">gaussian_kde</span><span class="p">((</span><span class="n">np</span><span class="p">.</span><span class="n">log10</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">cospa</span><span class="p">),</span> <span class="n">np</span><span class="p">.</span><span class="n">log10</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">profit</span><span class="p">)))</span>
+<span class="n">xi</span><span class="p">,</span> <span class="n">yi</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">mgrid</span><span class="p">[</span><span class="n">np</span><span class="p">.</span><span class="n">log10</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">cospa</span><span class="p">.</span><span class="nb">min</span><span class="p">()):</span><span class="n">np</span><span class="p">.</span><span class="n">log10</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">n0</span><span class="p">].</span><span class="n">cospa</span><span class="p">.</span><span class="nb">max</span><span class="p">()):</span><span class="n">nbins</span><span class="o">*</span><span class="mf">1j</span>
+                  <span class="p">,</span> <span class="n">np</span><span class="p">.</span><span class="n">log10</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">profit</span><span class="p">.</span><span class="nb">min</span><span class="p">()):</span><span class="n">np</span><span class="p">.</span><span class="n">log10</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">n0</span><span class="p">].</span><span class="n">profit</span><span class="p">.</span><span class="nb">max</span><span class="p">()):</span><span class="n">nbins</span><span class="o">*</span><span class="mf">1j</span><span class="p">]</span>
+<span class="n">zi</span><span class="o">=</span><span class="n">k</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">xi</span><span class="p">.</span><span class="n">flatten</span><span class="p">(),</span><span class="n">yi</span><span class="p">.</span><span class="n">flatten</span><span class="p">()]))</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">contour</span><span class="p">(</span><span class="mi">10</span><span class="o">**</span><span class="n">xi</span><span class="p">,</span><span class="mi">10</span><span class="o">**</span><span class="n">yi</span><span class="p">,</span><span class="n">zi</span><span class="p">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">xi</span><span class="p">.</span><span class="n">shape</span><span class="p">),</span><span class="n">cmap</span><span class="o">=</span><span class="s">"Greys"</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">.</span><span class="n">set_xscale</span><span class="p">(</span><span class="s">'log'</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">set_yscale</span><span class="p">(</span><span class="s">'log'</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s">'x-label'</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s">'y-label'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">draw</span><span class="p">()</span>
+</code></pre></div></div>
+<p><img src="/assets/img/blog/loglincont.png" alt="Full-width image" /></p>
+
+<h3 id="上色散点图两侧叠加密度histogram">上色散点图两侧叠加密度histogram</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span><span class="o">=</span><span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s">'a'</span><span class="p">:</span><span class="n">np</span><span class="p">.</span><span class="n">log10</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">a</span><span class="p">),</span><span class="s">'b'</span><span class="p">:</span><span class="n">np</span><span class="p">.</span><span class="n">log10</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">b</span><span class="p">),</span><span class="s">'c'</span><span class="p">:</span><span class="n">np</span><span class="p">.</span><span class="n">log10</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">c</span><span class="p">)})</span>
+<span class="n">sns</span><span class="p">.</span><span class="n">set_style</span><span class="p">(</span><span class="s">"white"</span><span class="p">)</span>
+<span class="c1">#regression line together with histogram
+</span><span class="n">g</span><span class="o">=</span><span class="n">sns</span><span class="p">.</span><span class="n">jointplot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="s">"a"</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s">"b"</span><span class="p">,</span><span class="n">kind</span><span class="o">=</span><span class="s">"reg"</span>
+                <span class="p">,</span><span class="n">scatter</span><span class="o">=</span><span class="bp">False</span>
+                <span class="c1">#change hist style
+</span>                <span class="p">,</span><span class="n">marginal_kws</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">'grey'</span><span class="p">)</span>
+                <span class="c1">#change line color and style
+</span>                <span class="p">,</span><span class="n">joint_kws</span><span class="o">=</span><span class="p">{</span><span class="s">'color'</span><span class="p">:</span><span class="s">'grey'</span><span class="p">},</span><span class="n">line_kws</span><span class="o">=</span><span class="p">{</span><span class="s">'alpha'</span><span class="p">:</span><span class="mf">0.5</span><span class="p">,</span><span class="s">'linestyle'</span><span class="p">:</span><span class="s">'dashed'</span><span class="p">}</span>
+                <span class="c1">#height is the only way to change fig size
+</span>                <span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">ratio</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+<span class="c1">#calculate linear regression parameters
+</span><span class="n">slope</span><span class="p">,</span><span class="n">intercept</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">std</span><span class="o">=</span><span class="n">stats</span><span class="p">.</span><span class="n">linregress</span><span class="p">(</span><span class="n">df</span><span class="p">.</span><span class="n">a</span><span class="p">,</span><span class="n">df</span><span class="p">.</span><span class="n">b</span><span class="p">)</span>
+<span class="n">phantom</span><span class="p">,</span> <span class="o">=</span><span class="n">g</span><span class="p">.</span><span class="n">ax_joint</span><span class="p">.</span><span class="n">plot</span><span class="p">([],</span> <span class="p">[],</span><span class="n">linestyle</span><span class="o">=</span><span class="s">""</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="c1">#annotate fitting parameters
+</span><span class="n">g</span><span class="p">.</span><span class="n">ax_joint</span><span class="p">.</span><span class="n">legend</span><span class="p">([</span><span class="n">phantom</span><span class="p">],[</span><span class="s">'log_a={:.2f}, log_b={:.2f}, r={:.2f}, p={:.2f}'</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">slope</span><span class="p">,</span><span class="n">intercept</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">p</span><span class="p">)])</span>
+
+<span class="c1">#plot scatter and color bar
+</span><span class="n">im</span><span class="o">=</span><span class="n">g</span><span class="p">.</span><span class="n">ax_joint</span><span class="p">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df</span><span class="p">.</span><span class="n">a</span><span class="p">,</span><span class="n">df</span><span class="p">.</span><span class="n">b</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">df</span><span class="p">.</span><span class="n">c</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="s">'plasma'</span><span class="p">)</span>
+<span class="n">cbar_ax</span><span class="o">=</span><span class="n">g</span><span class="p">.</span><span class="n">fig</span><span class="p">.</span><span class="n">add_axes</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,.</span><span class="mi">2</span><span class="p">,.</span><span class="mi">32</span><span class="p">,.</span><span class="mi">03</span><span class="p">])</span>
+<span class="n">cb</span><span class="o">=</span><span class="n">fig</span><span class="p">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">im</span><span class="p">,</span> <span class="n">cax</span><span class="o">=</span><span class="n">cbar_ax</span><span class="p">,</span><span class="n">orientation</span><span class="o">=</span><span class="s">"horizontal"</span><span class="p">)</span>
+<span class="n">cb</span><span class="p">.</span><span class="n">ax</span><span class="p">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s">"bar-label"</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+
+<span class="n">g</span><span class="p">.</span><span class="n">ax_joint</span><span class="p">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s">'x-label'</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">g</span><span class="p">.</span><span class="n">ax_joint</span><span class="p">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s">'y-label'</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">xlocs</span><span class="o">=</span><span class="n">g</span><span class="p">.</span><span class="n">ax_joint</span><span class="p">.</span><span class="n">get_xticks</span><span class="p">()</span>
+<span class="n">ylocs</span><span class="o">=</span><span class="n">g</span><span class="p">.</span><span class="n">ax_joint</span><span class="p">.</span><span class="n">get_yticks</span><span class="p">()</span>
+<span class="n">g</span><span class="p">.</span><span class="n">ax_joint</span><span class="p">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">])</span>
+<span class="n">g</span><span class="p">.</span><span class="n">ax_joint</span><span class="p">.</span><span class="n">set_xticklabels</span><span class="p">([</span><span class="s">"%.e"</span><span class="o">%</span><span class="mi">10</span><span class="o">**</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">xlocs</span><span class="p">],</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">g</span><span class="p">.</span><span class="n">ax_joint</span><span class="p">.</span><span class="n">set_yticklabels</span><span class="p">([</span><span class="s">"%.e"</span><span class="o">%</span><span class="mi">10</span><span class="o">**</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">ylocs</span><span class="p">],</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">tight_layout</span><span class="p">()</span> 
+<span class="n">plt</span><span class="p">.</span><span class="n">draw</span><span class="p">()</span>
+</code></pre></div></div>
+<p><img src="/assets/img/blog/hisbar.png" alt="Full-width image" /></p>
+
+<p class="read-more">Continue with <a href="/notes/tools/" class="heading flip-title">常用工具</a></p>
+
+<p>Back to <a href="/notes/" class="heading flip-title">Some Notes</a></p>
 
 
 </article>

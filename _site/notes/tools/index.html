@@ -37,8 +37,8 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 <meta property="og:title" content="Some Notes of Tools" />
 <meta name="author" content="Kexin Guo" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="This website is constructed with the Jekyll theme Hydejack. Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress." />
-<meta property="og:description" content="This website is constructed with the Jekyll theme Hydejack. Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress." />
+<meta name="description" content="这里记录了一些小工具的快速实现命令和问题解决方案" />
+<meta property="og:description" content="这里记录了一些小工具的快速实现命令和问题解决方案" />
 <link rel="canonical" href="http://localhost:4000/notes/tools/" />
 <meta property="og:url" content="http://localhost:4000/notes/tools/" />
 <meta property="og:site_name" content="Kexin Guo" />
@@ -46,7 +46,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Some Notes of Tools" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Kexin Guo"},"description":"This website is constructed with the Jekyll theme Hydejack. Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.","headline":"Some Notes of Tools","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/logo.png"},"name":"Kexin Guo"},"url":"http://localhost:4000/notes/tools/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Kexin Guo"},"description":"这里记录了一些小工具的快速实现命令和问题解决方案","headline":"Some Notes of Tools","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/logo.png"},"name":"Kexin Guo"},"url":"http://localhost:4000/notes/tools/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -111,7 +111,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2022-09-23T18:54:34+08:00',
+    INDEX_KEY: 'index--2022-09-24T07:44:33+08:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -210,14 +210,17 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 
 
 
-  <div class="hr pb0"></div>
+  
+    <p class="note-sm" >
+      这里记录了一些小工具的快速实现命令和问题解决方案
+
+    </p>
+  
 
 
   </header>
 
-  <p>这里记录了一些小工具的快速实现命令和问题解决方案</p>
-
-<ol id="markdown-toc">
+  <ol id="markdown-toc">
   <li><a href="#科学上网" id="markdown-toc-科学上网">科学上网</a>    <ol>
       <li><a href="#shell设置" id="markdown-toc-shell设置">shell设置</a></li>
     </ol>
@@ -269,7 +272,10 @@ convert <span class="nt">-delay</span> 20 F_<span class="k">*</span>.png <span c
 <h3 id="模糊图像">模糊图像</h3>
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>convert source.png <span class="nt">-channel</span> RGBA <span class="nt">-blur</span> 0x8 blurred.png
 </code></pre></div></div>
-<!--- Continue with [Scripts](scripts.md){:.heading.flip-title}-->
+
+<p class="read-more">Continue with <a href="/notes/notes_plot/" class="heading flip-title">Python Plots</a></p>
+
+<p>Back to <a href="/notes/" class="heading flip-title">Some Notes</a></p>
 
 
 </article>
