@@ -7,8 +7,9 @@ hide_description: false
 sitemap: false
 permalink: /notes/
 ---
+![Full-width image](/assets/img/blog/cat_0923.png)
 
 
-* [常用工具](tools.md)
+* [**常用工具**](tools.md)
 
-* [Python画图模块](notes_plot.md)
+* [**Python画图模块**](notes_plot.md)
