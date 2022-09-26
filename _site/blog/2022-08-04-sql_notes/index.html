@@ -114,7 +114,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2022-09-25T17:20:27+08:00',
+    INDEX_KEY: 'index--2022-09-26T14:45:28+08:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -276,7 +276,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
   </header>
 
   
-    <p>快速定位：<a href="#窗口函数">窗口函数</a>, <a href="#行列互换">行列互换</a></p>
+    <p>快速定位：<a href="#窗口函数">窗口函数</a>, <a href="#行列互换">行列互换</a>, <a href="#数据导出">数据导出</a></p>
 
 <ul class="large-only" id="markdown-toc">
   <li><a href="#窗口函数" id="markdown-toc-窗口函数">窗口函数</a>    <ul>
@@ -285,6 +285,10 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
   </li>
   <li><a href="#行列互换" id="markdown-toc-行列互换">行列互换</a>    <ul>
       <li><a href="#生成查询只排除某列的sql" id="markdown-toc-生成查询只排除某列的sql">生成查询只排除某列的sql</a></li>
+    </ul>
+  </li>
+  <li><a href="#数据导出" id="markdown-toc-数据导出">数据导出</a>    <ul>
+      <li><a href="#跳板机hive导出到csv" id="markdown-toc-跳板机hive导出到csv">跳板机hive导出到csv</a></li>
     </ul>
   </li>
 </ul>
@@ -333,6 +337,11 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
   <li>array_to_string以’,’为间隔拼接字符串</li>
   <li><code class="language-plaintext highlighter-rouge">||</code>拼接字符串，效果和concat()相同但更简洁</li>
 </ul>
+
+<h2 id="数据导出">数据导出</h2>
+<h3 id="跳板机hive导出到csv">跳板机hive导出到csv</h3>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hive <span class="nt">-f</span> output.hql | <span class="nb">sed</span> <span class="nt">-e</span> <span class="s1">'s/\t/,/g'</span><span class="o">&gt;[</span>自定义表格名称].csv
+</code></pre></div></div>
 
   
 </article>

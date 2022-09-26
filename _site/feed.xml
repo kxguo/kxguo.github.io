@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2022-09-25T17:20:27+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Kexin Guo</title><subtitle>This website is constructed with the Jekyll theme Hydejack. Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2022-09-26T14:45:28+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Kexin Guo</title><subtitle>This website is constructed with the Jekyll theme Hydejack. Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.
 </subtitle><author><name>Kexin Guo</name><email>kxguo@pku.edu.cn</email></author><entry><title type="html">Google Cloud 部署和data studio可视化相关</title><link href="http://localhost:4000/blog/2022-08-27-google_rel/" rel="alternate" type="text/html" title="Google Cloud 部署和data studio可视化相关" /><published>2022-08-27T00:00:00+08:00</published><updated>2022-08-27T00:00:00+08:00</updated><id>http://localhost:4000/blog/google_rel</id><content type="html" xml:base="http://localhost:4000/blog/2022-08-27-google_rel/">&lt;p&gt;快速定位：&lt;a href=&quot;#cloud function trouble shouting&quot;&gt;Cloud Function Trouble Shouting&lt;/a&gt;
 , &lt;a href=&quot;#数据洞察BI看板搭建&quot;&gt;数据洞察BI看板搭建&lt;/a&gt;&lt;/p&gt;
 
@@ -99,7 +99,7 @@ google-cloud-spanner&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;3.19.0
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;展示某产品研发阶段各版本迭代效果的示例图&quot;&gt;展示某产品研发阶段各版本迭代效果的示例图&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/img/blog/bi_datastudio.png&quot; alt=&quot;Full-width image&quot; /&gt;&lt;/p&gt;</content><author><name>Kexin Guo</name><email>kxguo@pku.edu.cn</email></author><category term="blog" /><category term="BI" /><category term="Spanner" /><category term="Data Analysis" /><summary type="html">快速定位：Cloud Function Trouble Shouting , 数据洞察BI看板搭建</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/cat_0827.jpeg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/cat_0827.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">SQL Notes</title><link href="http://localhost:4000/blog/2022-08-04-sql_notes/" rel="alternate" type="text/html" title="SQL Notes" /><published>2022-08-04T00:00:00+08:00</published><updated>2022-08-04T00:00:00+08:00</updated><id>http://localhost:4000/blog/sql_notes</id><content type="html" xml:base="http://localhost:4000/blog/2022-08-04-sql_notes/">&lt;p&gt;快速定位：&lt;a href=&quot;#窗口函数&quot;&gt;窗口函数&lt;/a&gt;, &lt;a href=&quot;#行列互换&quot;&gt;行列互换&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/bi_datastudio.png&quot; alt=&quot;Full-width image&quot; /&gt;&lt;/p&gt;</content><author><name>Kexin Guo</name><email>kxguo@pku.edu.cn</email></author><category term="blog" /><category term="BI" /><category term="Spanner" /><category term="Data Analysis" /><summary type="html">快速定位：Cloud Function Trouble Shouting , 数据洞察BI看板搭建</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/cat_0827.jpeg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/cat_0827.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">SQL Notes</title><link href="http://localhost:4000/blog/2022-08-04-sql_notes/" rel="alternate" type="text/html" title="SQL Notes" /><published>2022-08-04T00:00:00+08:00</published><updated>2022-08-04T00:00:00+08:00</updated><id>http://localhost:4000/blog/sql_notes</id><content type="html" xml:base="http://localhost:4000/blog/2022-08-04-sql_notes/">&lt;p&gt;快速定位：&lt;a href=&quot;#窗口函数&quot;&gt;窗口函数&lt;/a&gt;, &lt;a href=&quot;#行列互换&quot;&gt;行列互换&lt;/a&gt;, &lt;a href=&quot;#数据导出&quot;&gt;数据导出&lt;/a&gt;&lt;/p&gt;
 
 &lt;ul class=&quot;large-only&quot; id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#窗口函数&quot; id=&quot;markdown-toc-窗口函数&quot;&gt;窗口函数&lt;/a&gt;    &lt;ul&gt;
@@ -108,6 +108,10 @@ google-cloud-spanner&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;3.19.0
   &lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#行列互换&quot; id=&quot;markdown-toc-行列互换&quot;&gt;行列互换&lt;/a&gt;    &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#生成查询只排除某列的sql&quot; id=&quot;markdown-toc-生成查询只排除某列的sql&quot;&gt;生成查询只排除某列的sql&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#数据导出&quot; id=&quot;markdown-toc-数据导出&quot;&gt;数据导出&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#跳板机hive导出到csv&quot; id=&quot;markdown-toc-跳板机hive导出到csv&quot;&gt;跳板机hive导出到csv&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
@@ -155,7 +159,12 @@ google-cloud-spanner&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;3.19.0
   &lt;li&gt;array实现列转行&lt;/li&gt;
   &lt;li&gt;array_to_string以’,’为间隔拼接字符串&lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;||&lt;/code&gt;拼接字符串，效果和concat()相同但更简洁&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Kexin Guo</name><email>kxguo@pku.edu.cn</email></author><category term="blog" /><category term="SQL" /><category term="Data Analysis" /><summary type="html">快速定位：窗口函数, 行列互换</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/cat_0804.jpeg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/cat_0804.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">工作记录（脑图）</title><link href="http://localhost:4000/blog/2022-05-25-work_xmind/" rel="alternate" type="text/html" title="工作记录（脑图）" /><published>2022-05-25T00:00:00+08:00</published><updated>2022-05-25T00:00:00+08:00</updated><id>http://localhost:4000/blog/work_xmind</id><content type="html" xml:base="http://localhost:4000/blog/2022-05-25-work_xmind/">&lt;p&gt;快速定位：&lt;a href=&quot;#BOSS ZHIPIN&quot;&gt;BOSS ZHIPIN&lt;/a&gt;, &lt;a href=&quot;#Xiaomi&quot;&gt;Xiaomi&lt;/a&gt;&lt;/p&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;数据导出&quot;&gt;数据导出&lt;/h2&gt;
+&lt;h3 id=&quot;跳板机hive导出到csv&quot;&gt;跳板机hive导出到csv&lt;/h3&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hive &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; output.hql | &lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;s/\t/,/g&apos;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;[&lt;/span&gt;自定义表格名称].csv
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Kexin Guo</name><email>kxguo@pku.edu.cn</email></author><category term="blog" /><category term="SQL" /><category term="Data Analysis" /><summary type="html">快速定位：窗口函数, 行列互换, 数据导出</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/cat_0804.jpeg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/cat_0804.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">工作记录（脑图）</title><link href="http://localhost:4000/blog/2022-05-25-work_xmind/" rel="alternate" type="text/html" title="工作记录（脑图）" /><published>2022-05-25T00:00:00+08:00</published><updated>2022-05-25T00:00:00+08:00</updated><id>http://localhost:4000/blog/work_xmind</id><content type="html" xml:base="http://localhost:4000/blog/2022-05-25-work_xmind/">&lt;p&gt;快速定位：&lt;a href=&quot;#BOSS ZHIPIN&quot;&gt;BOSS ZHIPIN&lt;/a&gt;, &lt;a href=&quot;#Xiaomi&quot;&gt;Xiaomi&lt;/a&gt;&lt;/p&gt;
 
 &lt;ul class=&quot;large-only&quot; id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#boss-zhipin&quot; id=&quot;markdown-toc-boss-zhipin&quot;&gt;BOSS ZHIPIN&lt;/a&gt;&lt;/li&gt;
@@ -485,4 +494,255 @@ title: Ominicent Reader’s Viewpoint
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pandoc &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; gfm &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--toc&lt;/span&gt; ./chapterlist/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.txt &lt;span class=&quot;nt&quot;&gt;--metadata-file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;orvmeta &lt;span class=&quot;nt&quot;&gt;--epub-cover-image&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;orv.webp &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; orv.epub
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/blog/blurred_orv.png&quot; alt=&quot;Full-width image&quot; /&gt;&lt;/p&gt;</content><author><name>Kexin Guo</name><email>kxguo@pku.edu.cn</email></author><category term="blog" /><category term="crawler" /><category term="Data Analysis" /><summary type="html">快速定位：爬虫快速指南 , re匹配正则表达式 , 爬取过程 , pandoc格式转换</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/orv.jpeg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/orv.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/blurred_orv.png&quot; alt=&quot;Full-width image&quot; /&gt;&lt;/p&gt;</content><author><name>Kexin Guo</name><email>kxguo@pku.edu.cn</email></author><category term="blog" /><category term="crawler" /><category term="Data Analysis" /><summary type="html">快速定位：爬虫快速指南 , re匹配正则表达式 , 爬取过程 , pandoc格式转换</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/orv.jpeg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/orv.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">线性规划的单纯形法复习笔记和Python实现</title><link href="http://localhost:4000/blog/2021-06-26-linprog/" rel="alternate" type="text/html" title="线性规划的单纯形法复习笔记和Python实现" /><published>2021-06-26T00:00:00+08:00</published><updated>2021-06-26T00:00:00+08:00</updated><id>http://localhost:4000/blog/linprog</id><content type="html" xml:base="http://localhost:4000/blog/2021-06-26-linprog/">&lt;p&gt;快速定位：
+&lt;a href=&quot;#样例详解&quot;&gt;样例概述&lt;/a&gt;
+, &lt;a href=&quot;#单纯形和变量替代法&quot;&gt;单纯形和变量替代法&lt;/a&gt;
+, &lt;a href=&quot;#python实现&quot;&gt;python实现&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul class=&quot;large-only&quot; id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#样例概述&quot; id=&quot;markdown-toc-样例概述&quot;&gt;样例概述&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#问题简化&quot; id=&quot;markdown-toc-问题简化&quot;&gt;问题简化&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#解题思路&quot; id=&quot;markdown-toc-解题思路&quot;&gt;解题思路&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#单纯形和变量替代法&quot; id=&quot;markdown-toc-单纯形和变量替代法&quot;&gt;单纯形和变量替代法&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#变量替代&quot; id=&quot;markdown-toc-变量替代&quot;&gt;变量替代&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#寻找多重最优解&quot; id=&quot;markdown-toc-寻找多重最优解&quot;&gt;寻找多重最优解&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#python实现&quot; id=&quot;markdown-toc-python实现&quot;&gt;Python实现&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;样例概述&quot;&gt;样例概述&lt;/h2&gt;
+&lt;h3 id=&quot;问题简化&quot;&gt;问题简化&lt;/h3&gt;
+&lt;p&gt;假设有如下限制条件：（没有确定业务逻辑）&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;a. 每个派单电话平均需准备时间1分钟，认领需准备2分钟，总准备时长不超过22分钟&lt;/li&gt;
+  &lt;li&gt;b. 销售拨打精力为84分钟，平均一个派单消耗12分钟，平均一个认领消耗7分钟&lt;/li&gt;
+  &lt;li&gt;c. 派单和认领电话总量不超过80个&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;派单成单率0.5%，认领成单率1%，求最佳分配方案&lt;/p&gt;
+
+&lt;h3 id=&quot;解题思路&quot;&gt;解题思路&lt;/h3&gt;
+&lt;p&gt;由于本例只有派单数和认领数两个变量，
+可以用高中数学的图形接法，
+找到限制条件对应的直线围出图形的定点求最优解。
+但维度增加时就比较困难，
+所以可以采用单纯形(simplex)方法，
+找出超平面上符合条件的”顶点”，
+引入稀疏变量求出：&lt;/p&gt;
+
+&lt;p&gt;设&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x1&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x2&lt;/code&gt;分别为派单量、认领量，根据上述条件列出不等式：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;a. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x1 + 2·x2 &amp;lt;= 22&lt;/code&gt; (引入变量&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x3&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;b. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;12·x1 + 7·x2 &amp;lt;= 84&lt;/code&gt; (引入变量&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x4&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;c. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x1 + x2 &amp;lt;= 80&lt;/code&gt; (引入变量&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x5&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;隐含条件: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x1 &amp;gt;= 0, x2 &amp;gt;= 0&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;题目要求：求使&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;f = 0.5·x1 + 1·x2&lt;/code&gt;最大的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x1&lt;/code&gt;和&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x2&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;引入稀疏变量变为等式：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;a. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x1 + 2·x2 + x3 = 22&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;b. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;12·x1 + 7·x2 + x4 = 84&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;c. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x1 + x2 + x5 = 80&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;3个方程，5个变量，可知独立变量为3个，
+先选&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x3&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x4&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x5&lt;/code&gt;为基变量，另其余变量为0，
+可得一组解：&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x3 = 22, x4 = 84, x5 = 80&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;单纯形和变量替代法&quot;&gt;单纯形和变量替代法&lt;/h2&gt;
+&lt;h3 id=&quot;变量替代&quot;&gt;变量替代&lt;/h3&gt;
+&lt;p&gt;参考&lt;a href=&quot;https://blog.csdn.net/shulianghan/article/details/103348812&quot;&gt;【运筹学】线性规划 单纯形法原理&lt;/a&gt;，
+由于&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;f = 0.5·x1 + 1·x2&lt;/code&gt;，对&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x2&lt;/code&gt;的依赖最多，因此选择&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x2&lt;/code&gt;为新的基变量，
+被替换的基变量为原基变量&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(x3、x4、x5)&lt;/code&gt;中对&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x2&lt;/code&gt;变化最明显的变量，
+求法为：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;拆解线性规划条件的向量形式为：&lt;/li&gt;
+&lt;/ul&gt;
+
+\[\begin{array}{lr}
+maxZ=CX\\
+s.t \left\{
+             \begin{array}{lr}
+			 \Sigma^{m}_{i=1}P_ix_i + \Sigma^{n}_{j=m+1}P_jx_j = b \\
+             x_j\ge 0
+             \end{array}
+\right.
+\end{array}\]
+
+&lt;ul&gt;
+  &lt;li&gt;原条件方程组对应系数矩阵的增广矩阵 (第&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;j&lt;/code&gt;列构成列向量&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Pj&lt;/code&gt;)：&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x1&lt;/code&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x2&lt;/code&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x3&lt;/code&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x4&lt;/code&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x5&lt;/code&gt;&lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;22&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;12&lt;/td&gt;
+      &lt;td&gt;7&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;84&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;80&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;其中&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x2&lt;/code&gt;的增广矩阵系数&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;p2 = 2·p3 + 7·p4 + 1·p5&lt;/code&gt;，原基变量分别在&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x2&lt;/code&gt;增加到
+22/2, 84/7, 80/1时将不满足隐藏条件，
+因此将&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x3&lt;/code&gt;替换，用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x2&lt;/code&gt;代替，
+利用高斯消元法得到新的增广矩阵：&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x1&lt;/code&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x2&lt;/code&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x3&lt;/code&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x4&lt;/code&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x5&lt;/code&gt;&lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1/2&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1/2&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;11&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;17/2&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;-7/2&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;7&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1/2&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;-1/2&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;69&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;得到顶点&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;A: x1 = 0, x2 = 11, f = 11&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;测试是否为最优解，可以通过增广矩阵系数，对比&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;f&lt;/code&gt;对其他变量的依赖是否小于&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;f&lt;/code&gt;对当前基变量的依赖，
+如果是则为唯一最优解，可以省略后续步骤。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;寻找多重最优解&quot;&gt;寻找多重最优解&lt;/h3&gt;
+&lt;p&gt;由于&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x1&lt;/code&gt;的增广矩阵系数&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;p1 = 1/2·p2 + 17/2·p4 + 1/2·p5&lt;/code&gt;，
+且&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;f&lt;/code&gt;对&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x1&lt;/code&gt;的依赖（设为&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;c1&lt;/code&gt;）为0.5，
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;f&lt;/code&gt;对当前基变量的依赖与对&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x1&lt;/code&gt;的依赖相同，为：&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;c2·1/2 + c4·17/2 + c5·1/2 = c2·1/2 = 0.5 = c1&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;因此&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x1 = 0, x2 = 11&lt;/code&gt;是最优解，但不是唯一最优解。
+将&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x1&lt;/code&gt;继续替换当前基变量p4，可以得到最优解的另一个定点，对应增广矩阵:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x1&lt;/code&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x2&lt;/code&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x3&lt;/code&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x4&lt;/code&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x5&lt;/code&gt;&lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;12/17&lt;/td&gt;
+      &lt;td&gt;-1/17&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;11-7/17&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;-7/17&lt;/td&gt;
+      &lt;td&gt;2/17&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;14/17&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;-5/17&lt;/td&gt;
+      &lt;td&gt;-1/17&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;69-7/17&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;得到另一个顶点&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;B: x1 = 14/17, x2 = 11-7/17&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;顶点A和B之间线段上的所有点都是最优解（&lt;strong&gt;多重最优解&lt;/strong&gt;），他们决定的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;f&lt;/code&gt;都为11。&lt;/p&gt;
+
+&lt;h2 id=&quot;python实现&quot;&gt;Python实现&lt;/h2&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;scipy&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;optimize&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;op&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#最优化默认寻找最小值，因此取负
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; 
+&lt;span class=&quot;c1&quot;&gt;#条件a-c不等号左边系数，默认上限为B_ub，如果是下限则对A_ub取负
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;A_ub&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt; 
+&lt;span class=&quot;n&quot;&gt;B_ub&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;22&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;84&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;80&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#采用单纯形方法
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;res&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;op&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;linprog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A_ub&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B_ub&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;method&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;simplex&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#-&amp;gt; fun: -11.0
+#-&amp;gt; x: array([0.82352941, 10.58823529]) 即顶点B
+#可以采用另外的最优化方法来得到另一个定点，如插值法(默认，不指定method)，或&quot;revised simplex&quot;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;res&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;op&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;linprog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A_ub&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B_ub&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;method&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;revised simplex&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# -&amp;gt; fun: -11.0
+# -&amp;gt; x: array([0., 11.]) 即顶点A
+#用插值法得到的一般为A和B之间的某个点，如[0.02434973, 10.98782472]
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Kexin Guo</name><email>kxguo@pku.edu.cn</email></author><category term="blog" /><category term="Data Analysis" /><summary type="html">快速定位： 样例概述 , 单纯形和变量替代法 , python实现</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/crab.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/crab.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

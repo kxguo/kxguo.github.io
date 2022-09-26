@@ -10,6 +10,21 @@ sitemap: false
 1. 列表（占位作用）
 {:toc}
 
+## linux基本命令
+### human-readable size
+~~~shell
+ls -hl [filename]
+~~~
+
+## jekyll框架模板使用
+### 本地网页调试
+~~~shell
+Bundle install
+#add webrick用于处理bundler: failed to load command: jekyll问题
+Bundle add webrick
+Bundle exec Jekyll serve
+~~~
+
 ## 科学上网
 ### shell设置
 ShadowsocksX-NG、v2rayU等客户端工具的全局或PAC模式只能用于浏览器, 要在shell中实现翻墙需要将监听端口信息（这里为1087）写入环境变量
@@ -18,6 +33,12 @@ ShadowsocksX-NG、v2rayU等客户端工具的全局或PAC模式只能用于浏�
 # file: `.zshrc`
 export http_proxy=http://127.0.0.1:1087
 export https_proxy=http://127.0.0.1:1087
+~~~
+
+## 文件乱码处理
+### csv中文乱码
+~~~shell
+iconv -f UTF-8 -t GB18030 a.csv >b.csv
 ~~~
 
 ## Image Magic 

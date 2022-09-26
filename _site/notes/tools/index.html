@@ -111,7 +111,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2022-09-25T17:20:27+08:00',
+    INDEX_KEY: 'index--2022-09-26T14:45:28+08:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -221,8 +221,20 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
   </header>
 
   <ol id="markdown-toc">
+  <li><a href="#linux基本命令" id="markdown-toc-linux基本命令">linux基本命令</a>    <ol>
+      <li><a href="#human-readable-size" id="markdown-toc-human-readable-size">human-readable size</a></li>
+    </ol>
+  </li>
+  <li><a href="#jekyll框架模板使用" id="markdown-toc-jekyll框架模板使用">jekyll框架模板使用</a>    <ol>
+      <li><a href="#本地网页调试" id="markdown-toc-本地网页调试">本地网页调试</a></li>
+    </ol>
+  </li>
   <li><a href="#科学上网" id="markdown-toc-科学上网">科学上网</a>    <ol>
       <li><a href="#shell设置" id="markdown-toc-shell设置">shell设置</a></li>
+    </ol>
+  </li>
+  <li><a href="#文件乱码处理" id="markdown-toc-文件乱码处理">文件乱码处理</a>    <ol>
+      <li><a href="#csv中文乱码" id="markdown-toc-csv中文乱码">csv中文乱码</a></li>
     </ol>
   </li>
   <li><a href="#image-magic" id="markdown-toc-image-magic">Image Magic</a>    <ol>
@@ -236,6 +248,19 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
   </li>
 </ol>
 
+<h2 id="linux基本命令">linux基本命令</h2>
+<h3 id="human-readable-size">human-readable size</h3>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">ls</span> <span class="nt">-hl</span> <span class="o">[</span>filename]
+</code></pre></div></div>
+
+<h2 id="jekyll框架模板使用">jekyll框架模板使用</h2>
+<h3 id="本地网页调试">本地网页调试</h3>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Bundle <span class="nb">install</span>
+<span class="c">#add webrick用于处理bundler: failed to load command: jekyll问题</span>
+Bundle add webrick
+Bundle <span class="nb">exec </span>Jekyll serve
+</code></pre></div></div>
+
 <h2 id="科学上网">科学上网</h2>
 <h3 id="shell设置">shell设置</h3>
 <p>ShadowsocksX-NG、v2rayU等客户端工具的全局或PAC模式只能用于浏览器, 要在shell中实现翻墙需要将监听端口信息（这里为1087）写入环境变量</p>
@@ -243,6 +268,11 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># file: `.zshrc`</span>
 <span class="nb">export </span><span class="nv">http_proxy</span><span class="o">=</span>http://127.0.0.1:1087
 <span class="nb">export </span><span class="nv">https_proxy</span><span class="o">=</span>http://127.0.0.1:1087
+</code></pre></div></div>
+
+<h2 id="文件乱码处理">文件乱码处理</h2>
+<h3 id="csv中文乱码">csv中文乱码</h3>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>iconv <span class="nt">-f</span> UTF-8 <span class="nt">-t</span> GB18030 a.csv <span class="o">&gt;</span>b.csv
 </code></pre></div></div>
 
 <h2 id="image-magic">Image Magic</h2>
