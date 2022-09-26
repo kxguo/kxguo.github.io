@@ -25,6 +25,14 @@ Bundle add webrick
 Bundle exec Jekyll serve
 ~~~
 
+## Git trouble shooting
+### fatal: The remote end hung up unexpectedly
+This is due to git/https buffer settings. 
+The default file post size for Git has been exceeded.
+~~~shell
+git config http.postBuffer 524288000
+~~~
+
 ## 科学上网
 ### shell设置
 ShadowsocksX-NG、v2rayU等客户端工具的全局或PAC模式只能用于浏览器, 要在shell中实现翻墙需要将监听端口信息（这里为1087）写入环境变量

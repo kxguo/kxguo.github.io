@@ -111,7 +111,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2022-09-26T14:45:28+08:00',
+    INDEX_KEY: 'index--2022-09-26T14:56:49+08:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -229,6 +229,10 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
       <li><a href="#本地网页调试" id="markdown-toc-本地网页调试">本地网页调试</a></li>
     </ol>
   </li>
+  <li><a href="#git-trouble-shooting" id="markdown-toc-git-trouble-shooting">Git trouble shooting</a>    <ol>
+      <li><a href="#fatal-the-remote-end-hung-up-unexpectedly" id="markdown-toc-fatal-the-remote-end-hung-up-unexpectedly">fatal: The remote end hung up unexpectedly</a></li>
+    </ol>
+  </li>
   <li><a href="#科学上网" id="markdown-toc-科学上网">科学上网</a>    <ol>
       <li><a href="#shell设置" id="markdown-toc-shell设置">shell设置</a></li>
     </ol>
@@ -259,6 +263,13 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 <span class="c">#add webrick用于处理bundler: failed to load command: jekyll问题</span>
 Bundle add webrick
 Bundle <span class="nb">exec </span>Jekyll serve
+</code></pre></div></div>
+
+<h2 id="git-trouble-shooting">Git trouble shooting</h2>
+<h3 id="fatal-the-remote-end-hung-up-unexpectedly">fatal: The remote end hung up unexpectedly</h3>
+<p>This is due to git/https buffer settings. 
+The default file post size for Git has been exceeded.</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config http.postBuffer 524288000
 </code></pre></div></div>
 
 <h2 id="科学上网">科学上网</h2>
