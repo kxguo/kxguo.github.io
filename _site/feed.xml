@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2022-09-26T14:56:49+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Kexin Guo</title><subtitle>This website is constructed with the Jekyll theme Hydejack. Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2022-10-08T18:23:34+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Kexin Guo</title><subtitle>This website is constructed with the Jekyll theme Hydejack. Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.
 </subtitle><author><name>Kexin Guo</name><email>kxguo@pku.edu.cn</email></author><entry><title type="html">Google Cloud 部署和data studio可视化相关</title><link href="http://localhost:4000/blog/2022-08-27-google_rel/" rel="alternate" type="text/html" title="Google Cloud 部署和data studio可视化相关" /><published>2022-08-27T00:00:00+08:00</published><updated>2022-08-27T00:00:00+08:00</updated><id>http://localhost:4000/blog/google_rel</id><content type="html" xml:base="http://localhost:4000/blog/2022-08-27-google_rel/">&lt;p&gt;快速定位：&lt;a href=&quot;#cloud function trouble shouting&quot;&gt;Cloud Function Trouble Shouting&lt;/a&gt;
 , &lt;a href=&quot;#数据洞察BI看板搭建&quot;&gt;数据洞察BI看板搭建&lt;/a&gt;&lt;/p&gt;
 
@@ -99,7 +99,76 @@ google-cloud-spanner&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;3.19.0
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;展示某产品研发阶段各版本迭代效果的示例图&quot;&gt;展示某产品研发阶段各版本迭代效果的示例图&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/img/blog/bi_datastudio.png&quot; alt=&quot;Full-width image&quot; /&gt;&lt;/p&gt;</content><author><name>Kexin Guo</name><email>kxguo@pku.edu.cn</email></author><category term="blog" /><category term="BI" /><category term="Spanner" /><category term="Data Analysis" /><summary type="html">快速定位：Cloud Function Trouble Shouting , 数据洞察BI看板搭建</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/cat_0827.jpeg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/cat_0827.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">SQL Notes</title><link href="http://localhost:4000/blog/2022-08-04-sql_notes/" rel="alternate" type="text/html" title="SQL Notes" /><published>2022-08-04T00:00:00+08:00</published><updated>2022-08-04T00:00:00+08:00</updated><id>http://localhost:4000/blog/sql_notes</id><content type="html" xml:base="http://localhost:4000/blog/2022-08-04-sql_notes/">&lt;p&gt;快速定位：&lt;a href=&quot;#窗口函数&quot;&gt;窗口函数&lt;/a&gt;, &lt;a href=&quot;#行列互换&quot;&gt;行列互换&lt;/a&gt;, &lt;a href=&quot;#数据导出&quot;&gt;数据导出&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/bi_datastudio.png&quot; alt=&quot;Full-width image&quot; /&gt;&lt;/p&gt;</content><author><name>Kexin Guo</name><email>kxguo@pku.edu.cn</email></author><category term="blog" /><category term="BI" /><category term="Spanner" /><category term="Data Analysis" /><summary type="html">快速定位：Cloud Function Trouble Shouting , 数据洞察BI看板搭建</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/cat_0827.jpeg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/cat_0827.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">MEV transaction analysis - a sandwich attack</title><link href="http://localhost:4000/blog/2022-08-26-mev/" rel="alternate" type="text/html" title="MEV transaction analysis - a sandwich attack" /><published>2022-08-26T00:00:00+08:00</published><updated>2022-08-26T00:00:00+08:00</updated><id>http://localhost:4000/blog/mev</id><content type="html" xml:base="http://localhost:4000/blog/2022-08-26-mev/">&lt;ul class=&quot;large-only&quot; id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#introduction&quot; id=&quot;markdown-toc-introduction&quot;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#the-front-running-transaction&quot; id=&quot;markdown-toc-the-front-running-transaction&quot;&gt;The front-running transaction&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#the-victim-transaction&quot; id=&quot;markdown-toc-the-victim-transaction&quot;&gt;The victim transaction&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#the-back-running-transaction&quot; id=&quot;markdown-toc-the-back-running-transaction&quot;&gt;The back-running transaction&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;introduction&quot;&gt;Introduction&lt;/h3&gt;
+&lt;p&gt;MEV (&lt;a href=&quot;https://eigenphi.io&quot;&gt;0x8cfbb935a8461e8681ac1e06b760530d824f6ef085a07e7ac49121eaee3cbe5a&lt;/a&gt;),
+is a sandwich-attach transaction discussed as an 
+&lt;a href=&quot;https://github.com/eigenphi/AwesomeTx/issues/11&quot;&gt;#AwesomeTx&lt;/a&gt; on github.
+It is also the first bundle packed in block 14811888 (before the Merge) by &lt;a href=&quot;https://flashbots-explorer.marto.lol/?block=14811888&quot;&gt;Flashbot&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/mevbundle.png&quot; alt=&quot;Full-width image&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;the-front-running-transaction&quot;&gt;&lt;a href=&quot;https://etherscan.io/tx/0xada54289d2a5556b2aa8f6ca26317a0649397fff8babd7a5bb6f6270815c8a8e&quot;&gt;The front-running transaction&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://tx.eigenphi.io/analyseTransaction.svg?chain=ethereum&amp;amp;tx=0xada54289d2a5556b2aa8f6ca26317a0649397fff8babd7a5bb6f6270815c8a8e&amp;amp;rankdir=LR&quot; alt=&quot;Full-width image&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;After having monitored a USDC/USDT swap transaction,
+the attacker borrowed a 131,705 WETH flah loan (6,20),
+and collateralized the WETHs borrowed together with his own 2,423 WETH (0,5,8), 
+to further borrow 145,000,000 DAI (11)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The DAIs borrowed were then swapped for 144,513,418 USDC in Curve Pool (12,13),
+lowering the USDC/DAI, as well as the USDC/USDT rate&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The USDC swapped out in the last step was then swapped into 144,513,418 DAI
+to repay part of the 145,000,000 DAI debt.
+After withdrawing 131,705 WETH from collateral to replay the flash loan,
+486,582 DAI debt is left with 2423 WETH collateralized.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;the-victim-transaction&quot;&gt;&lt;a href=&quot;https://etherscan.io/tx/0x29afdc352692a037a80d871fce20dd7515b70313860a63220c57529022ab22c7&quot;&gt;The victim transaction&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://tx.eigenphi.io/analyseTransaction.svg?chain=ethereum&amp;amp;tx=0x29afdc352692a037a80d871fce20dd7515b70313860a63220c57529022ab22c7&amp;amp;rankdir=LR&quot; alt=&quot;Full-width image&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The victim paid much more USDTs for USDCs in Curve Pool than in other LPs (8-11)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;the-back-running-transaction&quot;&gt;&lt;a href=&quot;https://etherscan.io/tx/0x125f8af2870daa4b00f55e3b6b2d368a409e3b056b1ab6a2dbbcd1a554bd79e1&quot;&gt;The back-running transaction&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://tx.eigenphi.io/analyseTransaction.svg?chain=ethereum&amp;amp;tx=0x125f8af2870daa4b00f55e3b6b2d368a409e3b056b1ab6a2dbbcd1a554bd79e1&amp;amp;rankdir=LR&quot; alt=&quot;Full-width image&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Basically the same as &lt;a href=&quot;#the-front-running-transaction&quot;&gt;The front-running transaction&lt;/a&gt;
+the front-running transaction but acting in a reversed way.
+In the beginning, the attacker borrowed a 131,705 WETH flash loan (1,18) 
+and took it as collateral to borrow 144,513,418 USDS (6)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The borrowed USDCs were then swapped into 145,078,476 DAI in Curve Pool&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;After repaying the 486,582 DAI debt (10) and the new USDC debt (11,13,15),
+the attacker got back 134,129 WETH from collateral, which consists of 131,705 WETH flash loan
+and the attacker’s own 2,423 WETH&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The attacker then repaid the flash loan and earned 78,476 DAI (20) as a profit from sandwich attack&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;After paying the miner 1.973 ETH by Coinbase Transfer, the attacker’s net profit is 37.634 ETH&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Kexin Guo</name><email>kxguo@pku.edu.cn</email></author><category term="blog" /><category term="Block Chain" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/sandwich.jpeg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/sandwich.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">SQL Notes</title><link href="http://localhost:4000/blog/2022-08-04-sql_notes/" rel="alternate" type="text/html" title="SQL Notes" /><published>2022-08-04T00:00:00+08:00</published><updated>2022-08-04T00:00:00+08:00</updated><id>http://localhost:4000/blog/sql_notes</id><content type="html" xml:base="http://localhost:4000/blog/2022-08-04-sql_notes/">&lt;p&gt;快速定位：&lt;a href=&quot;#窗口函数&quot;&gt;窗口函数&lt;/a&gt;, &lt;a href=&quot;#行列互换&quot;&gt;行列互换&lt;/a&gt;, &lt;a href=&quot;#数据导出&quot;&gt;数据导出&lt;/a&gt;&lt;/p&gt;
 
 &lt;ul class=&quot;large-only&quot; id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#窗口函数&quot; id=&quot;markdown-toc-窗口函数&quot;&gt;窗口函数&lt;/a&gt;    &lt;ul&gt;

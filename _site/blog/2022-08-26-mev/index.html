@@ -32,21 +32,24 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   
     
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Migration | Kexin Guo</title>
+<title>MEV transaction analysis - a sandwich attack | Kexin Guo</title>
 <meta name="generator" content="Jekyll v3.9.2" />
-<meta property="og:title" content="Migration" />
+<meta property="og:title" content="MEV transaction analysis - a sandwich attack" />
 <meta name="author" content="Kexin Guo" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="This documents shows how to upgrade Hydejack from previous versions (v5) in a step-by-step manner." />
-<meta property="og:description" content="This documents shows how to upgrade Hydejack from previous versions (v5) in a step-by-step manner." />
-<link rel="canonical" href="http://localhost:4000/docs/migration/" />
-<meta property="og:url" content="http://localhost:4000/docs/migration/" />
+<meta name="description" content="利用Eigenphi.io研究MEV交易时的分析case (photo token in Perth, 2019)" />
+<meta property="og:description" content="利用Eigenphi.io研究MEV交易时的分析case (photo token in Perth, 2019)" />
+<link rel="canonical" href="http://localhost:4000/blog/2022-08-26-mev/" />
+<meta property="og:url" content="http://localhost:4000/blog/2022-08-26-mev/" />
 <meta property="og:site_name" content="Kexin Guo" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Migration" />
+<meta property="og:image" content="http://localhost:4000/assets/img/blog/sandwich.jpeg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-08-26T00:00:00+08:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/assets/img/blog/sandwich.jpeg" />
+<meta property="twitter:title" content="MEV transaction analysis - a sandwich attack" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Kexin Guo"},"description":"This documents shows how to upgrade Hydejack from previous versions (v5) in a step-by-step manner.","headline":"Migration","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/logo.png"},"name":"Kexin Guo"},"url":"http://localhost:4000/docs/migration/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Kexin Guo"},"dateModified":"2022-08-26T00:00:00+08:00","datePublished":"2022-08-26T00:00:00+08:00","description":"利用Eigenphi.io研究MEV交易时的分析case (photo token in Perth, 2019)","headline":"MEV transaction analysis - a sandwich attack","image":"http://localhost:4000/assets/img/blog/sandwich.jpeg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2022-08-26-mev/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/logo.png"},"name":"Kexin Guo"},"url":"http://localhost:4000/blog/2022-08-26-mev/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -74,7 +77,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 <meta name="generator" content="Hydejack v9.1.6" />
 
 
-<link rel="alternate" href="http://localhost:4000/docs/migration/" hreflang="en">
+<link rel="alternate" href="http://localhost:4000/blog/2022-08-26-mev/" hreflang="en">
 
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Kexin Guo" />
 
@@ -177,7 +180,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 
   <main
   id="_main"
-  class="content layout-page"
+  class="content layout-post"
   role="main"
 >
   <nav id="breadcrumbs" class="screen-only"><ul>
@@ -190,200 +193,329 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
           <span>/</span>
           
           
-          <a href="/docs/">docs</a>
+          <a href="/blog/">blog</a>
         
       </li>
     
       <li>
         
           <span>/</span>
-          <span>migration</span>
+          <span>2022-08-26-mev</span>
         
       </li>
     
   
 </ul></nav>
-  <article class="page mb6" role="article">
+  
+
+
+
+
+
+
+
+
+
+
+<article id="post-blog-mev" class="page post mb6" role="article">
   <header>
-    <h1 class="page-title">Migration</h1>
+    <h1 class="post-title flip-project-title">
+      
+        MEV transaction analysis - a sandwich attack
+      
+    </h1>
+
+    <div class="post-date">
+      
+      <span class="ellipsis mr1">
+        <time datetime="2022-08-26T00:00:00+08:00">26 Aug 2022</time> in <a href="/blog/" class="flip-title">Blog</a> on <span>Block chain</span>
+      </span>
+      
+        
+      
+    </div>
+
+    
+    
+      
+        <div class="img-wrapper lead aspect-ratio sixteen-nine flip-project-img">
+          
+
+
+<img
+  
+    src="/assets/img/blog/sandwich.jpeg"
+    
+    
+  
+  alt="MEV transaction analysis - a sandwich attack"
+  
+  
+  width="864"
+  height="486"
+  loading="lazy"
+/>
+
+        </div>
+      
+      
+    
+
     
 
 
 
   
-    <div class="hr pb0"></div>
+    <p class="note-sm" >
+      利用<a href="https://eigenphi.io">Eigenphi.io</a>研究MEV交易时的分析case (photo token in Perth, 2019)
+
+    </p>
   
 
 
   </header>
 
-  <p>This documents shows how to upgrade Hydejack from previous versions (v5) in a step-by-step manner.</p>
-
-<p>Unfortunately, upgrading form v5 and earlier is not straightforward. A lot of patterns and names have changed, motivated by a variety of reasons, including better integration with the rest of the Jekyll ecosystem and simplified workflows enabled by Jekyll Collections.</p>
-
-<ol id="markdown-toc">
-  <li><a href="#from-v5" id="markdown-toc-from-v5">From v5</a>    <ol>
-      <li><a href="#updating-the-folder-structure" id="markdown-toc-updating-the-folder-structure">Updating the folder structure</a></li>
-      <li><a href="#updating-the-configuration" id="markdown-toc-updating-the-configuration">Updating the configuration</a></li>
-      <li><a href="#restoring-the-tags" id="markdown-toc-restoring-the-tags">Restoring the tags</a></li>
-      <li><a href="#restoring-the-sidebar-entries" id="markdown-toc-restoring-the-sidebar-entries">Restoring the sidebar entries</a></li>
-      <li><a href="#restoring-the-rss-feed" id="markdown-toc-restoring-the-rss-feed">Restoring the RSS feed</a></li>
-      <li><a href="#restoring-the-comments" id="markdown-toc-restoring-the-comments">Restoring the comments</a></li>
-      <li><a href="#restoring-the-about-page" id="markdown-toc-restoring-the-about-page">Restoring the about page</a></li>
-    </ol>
-  </li>
-</ol>
-
-<h2 id="from-v5">From v5</h2>
-<h3 id="updating-the-folder-structure">Updating the folder structure</h3>
-<p>Copy the following folders and files from Hydejack v6 into your existing repository. Make sure you merge the folder contents.</p>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">_data/</code></li>
-  <li><code class="language-plaintext highlighter-rouge">_includes/</code></li>
-  <li><code class="language-plaintext highlighter-rouge">_layouts/</code></li>
-  <li><code class="language-plaintext highlighter-rouge">_sass/</code></li>
-  <li><code class="language-plaintext highlighter-rouge">assets/</code></li>
-  <li><code class="language-plaintext highlighter-rouge">index.html</code> (<code class="language-plaintext highlighter-rouge">index.md</code>*)</li>
-  <li><code class="language-plaintext highlighter-rouge">Gemfile</code></li>
-  <li><code class="language-plaintext highlighter-rouge">Gemfile.lock</code></li>
+  
+    <ul class="large-only" id="markdown-toc">
+  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
+  <li><a href="#the-front-running-transaction" id="markdown-toc-the-front-running-transaction">The front-running transaction</a></li>
+  <li><a href="#the-victim-transaction" id="markdown-toc-the-victim-transaction">The victim transaction</a></li>
+  <li><a href="#the-back-running-transaction" id="markdown-toc-the-back-running-transaction">The back-running transaction</a></li>
 </ul>
 
-<p>Note that the <code class="language-plaintext highlighter-rouge">public</code> folder has been renamed to <code class="language-plaintext highlighter-rouge">assets</code>.
-You’ll want to move your static assets there.</p>
+<h3 id="introduction">Introduction</h3>
+<p>MEV (<a href="https://eigenphi.io">0x8cfbb935a8461e8681ac1e06b760530d824f6ef085a07e7ac49121eaee3cbe5a</a>),
+is a sandwich-attach transaction discussed as an 
+<a href="https://github.com/eigenphi/AwesomeTx/issues/11">#AwesomeTx</a> on github.
+It is also the first bundle packed in block 14811888 (before the Merge) by <a href="https://flashbots-explorer.marto.lol/?block=14811888">Flashbot</a>.</p>
 
-<h3 id="updating-the-configuration">Updating the configuration</h3>
-<p><code class="language-plaintext highlighter-rouge">_config.yml</code> has changed considerably. Open it and make the following changes.</p>
+<p><img src="/assets/img/blog/mevbundle.png" alt="Full-width image" /></p>
 
-<ol>
+<h3 id="the-front-running-transaction"><a href="https://etherscan.io/tx/0xada54289d2a5556b2aa8f6ca26317a0649397fff8babd7a5bb6f6270815c8a8e">The front-running transaction</a></h3>
+
+<p><img src="https://tx.eigenphi.io/analyseTransaction.svg?chain=ethereum&amp;tx=0xada54289d2a5556b2aa8f6ca26317a0649397fff8babd7a5bb6f6270815c8a8e&amp;rankdir=LR" alt="Full-width image" /></p>
+
+<ul>
   <li>
-    <p>Rename the following keys</p>
-
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">font_accent</code> =&gt; <code class="language-plaintext highlighter-rouge">font_heading</code></li>
-      <li><code class="language-plaintext highlighter-rouge">load_google_fonts</code> =&gt; <code class="language-plaintext highlighter-rouge">google_fonts</code></li>
-      <li><code class="language-plaintext highlighter-rouge">google_analytics_id</code> =&gt; <code class="language-plaintext highlighter-rouge">google_analytics</code></li>
-    </ul>
+    <p>After having monitored a USDC/USDT swap transaction,
+the attacker borrowed a 131,705 WETH flah loan (6,20),
+and collateralized the WETHs borrowed together with his own 2,423 WETH (0,5,8), 
+to further borrow 145,000,000 DAI (11)</p>
   </li>
   <li>
-    <p>Enable Jekyll Collections for categories and tags by adding</p>
-
-    <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">collections</span><span class="pi">:</span>
-  <span class="na">featured_categories</span><span class="pi">:</span>
-    <span class="na">permalink</span><span class="pi">:</span> <span class="s">/category/:name/</span>
-    <span class="na">output</span><span class="pi">:</span>    <span class="no">true</span>
-  <span class="na">featured_tags</span><span class="pi">:</span>
-    <span class="na">permalink</span><span class="pi">:</span> <span class="s">/tag/:name/</span>
-    <span class="na">output</span><span class="pi">:</span>    <span class="no">true</span>
-</code></pre></div>    </div>
+    <p>The DAIs borrowed were then swapped for 144,513,418 USDC in Curve Pool (12,13),
+lowering the USDC/DAI, as well as the USDC/USDT rate</p>
   </li>
   <li>
-    <p>Delete <code class="language-plaintext highlighter-rouge">photo</code> and <code class="language-plaintext highlighter-rouge">photo2x</code> form the author key and add a <code class="language-plaintext highlighter-rouge">picture</code> hash instead that looks like</p>
+    <p>The USDC swapped out in the last step was then swapped into 144,513,418 DAI
+to repay part of the 145,000,000 DAI debt.
+After withdrawing 131,705 WETH from collateral to replay the flash loan,
+486,582 DAI debt is left with 2423 WETH collateralized.</p>
+  </li>
+</ul>
 
-    <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">picture</span><span class="pi">:</span>
-  <span class="na">path</span><span class="pi">:</span> <span class="s">&lt;photo&gt;</span>
-  <span class="na">srcset</span><span class="pi">:</span>
-    <span class="na">1x</span><span class="pi">:</span> <span class="s">&lt;photo&gt;</span>
-    <span class="na">2x</span><span class="pi">:</span> <span class="s">&lt;photo2x&gt;</span>
-</code></pre></div>    </div>
+<h3 id="the-victim-transaction"><a href="https://etherscan.io/tx/0x29afdc352692a037a80d871fce20dd7515b70313860a63220c57529022ab22c7">The victim transaction</a></h3>
+<p><img src="https://tx.eigenphi.io/analyseTransaction.svg?chain=ethereum&amp;tx=0x29afdc352692a037a80d871fce20dd7515b70313860a63220c57529022ab22c7&amp;rankdir=LR" alt="Full-width image" /></p>
 
-    <p>If you have only one photo, you can just provide the URL directly, e.g. <code class="language-plaintext highlighter-rouge">picture: &lt;url&gt;</code>.</p>
+<ul>
+  <li>The victim paid much more USDTs for USDCs in Curve Pool than in other LPs (8-11)</li>
+</ul>
 
-    <p>For more information, see <a href="/docs/config/#adding-an-author">Adding an author</a>.</p>
+<h3 id="the-back-running-transaction"><a href="https://etherscan.io/tx/0x125f8af2870daa4b00f55e3b6b2d368a409e3b056b1ab6a2dbbcd1a554bd79e1">The back-running transaction</a></h3>
+<p><img src="https://tx.eigenphi.io/analyseTransaction.svg?chain=ethereum&amp;tx=0x125f8af2870daa4b00f55e3b6b2d368a409e3b056b1ab6a2dbbcd1a554bd79e1&amp;rankdir=LR" alt="Full-width image" /></p>
+
+<ul>
+  <li>
+    <p>Basically the same as <a href="#the-front-running-transaction">The front-running transaction</a>
+the front-running transaction but acting in a reversed way.
+In the beginning, the attacker borrowed a 131,705 WETH flash loan (1,18) 
+and took it as collateral to borrow 144,513,418 USDS (6)</p>
   </li>
   <li>
-    <p>Rename <code class="language-plaintext highlighter-rouge">gems</code> to <code class="language-plaintext highlighter-rouge">plugins</code> and make sure the list contains <code class="language-plaintext highlighter-rouge">jekyll-seo-tag</code>.</p>
-
-    <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">plugins</span><span class="pi">:</span>
-  <span class="pi">-</span> <span class="s">jekyll-seo-tag</span>
-</code></pre></div>    </div>
-  </li>
-</ol>
-
-<p class="note">When making changes to <code class="language-plaintext highlighter-rouge">_config.yml</code>, it is necessary to restart the Jekyll process for the changes to take effect.</p>
-
-<h3 id="restoring-the-tags">Restoring the tags</h3>
-<ol>
-  <li>Delete the <code class="language-plaintext highlighter-rouge">tag</code> folder.</li>
-  <li>Create a top-level folder called <code class="language-plaintext highlighter-rouge">_featured_tags</code>.</li>
-  <li>For each entry in <code class="language-plaintext highlighter-rouge">_data/tags.yml</code>, create a markdown file in <code class="language-plaintext highlighter-rouge">_features_tags</code> with the name of the tag as filename,
-e.g. <code class="language-plaintext highlighter-rouge">hyde.md</code> for tag “hyde”.</li>
-  <li>
-    <p>For each tag, copy its contents from <code class="language-plaintext highlighter-rouge">_data/tags.yml</code> into the new file’s front matter, e.g.</p>
-
-    <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
-<span class="na">layout</span><span class="pi">:</span> <span class="s">list</span>
-<span class="na">name</span><span class="pi">:</span> <span class="s">Hyde</span>
-<span class="na">description</span><span class="pi">:</span> <span class="pi">&gt;</span>
-  <span class="s">Hyde is a brazen two-column Jekyll theme...</span>
-<span class="na">accent_image</span><span class="pi">:</span> <span class="s">/hydejack/public/img/hyde.jpg</span>
-<span class="na">accent_color</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#949667'</span>
-<span class="nn">---</span>
-</code></pre></div>    </div>
-
-    <p>Be aware that <code class="language-plaintext highlighter-rouge">image</code> has been renamed to <code class="language-plaintext highlighter-rouge">accent_image</code> and <code class="language-plaintext highlighter-rouge">color</code> has been renamed to <code class="language-plaintext highlighter-rouge">accent_color</code>.</p>
-  </li>
-  <li>Add <code class="language-plaintext highlighter-rouge">layout: list</code> to the front matter.</li>
-  <li>Once you’ve copied all tags into their own files, delete <code class="language-plaintext highlighter-rouge">_data/tags.yml</code>.</li>
-</ol>
-
-<h3 id="restoring-the-sidebar-entries">Restoring the sidebar entries</h3>
-<p>Hydejack can now link to any kind of page in the sidebar.</p>
-
-<ol>
-  <li>Delete <code class="language-plaintext highlighter-rouge">sidebar_tags</code> in <code class="language-plaintext highlighter-rouge">_config.yml</code>.</li>
-  <li>Open a file who’s page you would like to add to the sidebar. If you want to add a tag, open <code class="language-plaintext highlighter-rouge">_featured_tags/&lt;tagname&gt;.md</code>.</li>
-  <li>Add <code class="language-plaintext highlighter-rouge">menu: true</code> to its front matter.</li>
-  <li>(Optional) Set <code class="language-plaintext highlighter-rouge">order: &lt;number&gt;</code>, where <code class="language-plaintext highlighter-rouge">&lt;number&gt;</code> is the number at which you would like the link to appear.</li>
-</ol>
-
-<h3 id="restoring-the-rss-feed">Restoring the RSS feed</h3>
-<p>The feed is now provided by the <code class="language-plaintext highlighter-rouge">jekyll-feed</code> plugin instead of a custom solution.</p>
-
-<ol>
-  <li>Delete <code class="language-plaintext highlighter-rouge">atom.xml</code></li>
-  <li>
-    <p>Add <code class="language-plaintext highlighter-rouge">- jekyll-feed</code> to <code class="language-plaintext highlighter-rouge">gems</code> in <code class="language-plaintext highlighter-rouge">_config.yml</code>, e.g.</p>
-
-    <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">gems</span><span class="pi">:</span>
-  <span class="pi">-</span> <span class="s">jekyll-seo-tag</span>
-  <span class="pi">-</span> <span class="s">jekyll-feed</span>
-</code></pre></div>    </div>
+    <p>The borrowed USDCs were then swapped into 145,078,476 DAI in Curve Pool</p>
   </li>
   <li>
-    <p>(Optional) Add the following to <code class="language-plaintext highlighter-rouge">_config.yml</code> to make the feed appear at the same URL as the old <code class="language-plaintext highlighter-rouge">atom.xml</code>.</p>
-
-    <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">feed</span><span class="pi">:</span>
-  <span class="na">path</span><span class="pi">:</span> <span class="s">atom.xml</span>
-</code></pre></div>    </div>
+    <p>After repaying the 486,582 DAI debt (10) and the new USDC debt (11,13,15),
+the attacker got back 134,129 WETH from collateral, which consists of 131,705 WETH flash loan
+and the attacker’s own 2,423 WETH</p>
   </li>
-</ol>
+  <li>
+    <p>The attacker then repaid the flash loan and earned 78,476 DAI (20) as a profit from sandwich attack</p>
+  </li>
+  <li>
+    <p>After paying the miner 1.973 ETH by Coinbase Transfer, the attacker’s net profit is 37.634 ETH</p>
+  </li>
+</ul>
 
-<h3 id="restoring-the-comments">Restoring the comments</h3>
-<p>The way comments are enabled has changed slightly.
-You now have to enable them per page by adding <code class="language-plaintext highlighter-rouge">comments: true</code> to the front matter
-(this is what the <a href="https://disqus.com/admin/install/platforms/jekyll/">Disqus integration guide</a> suggests).
-To enable them for all posts, add to the config file</p>
-
-<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">defaults</span><span class="pi">:</span>
-  <span class="pi">-</span> <span class="na">scope</span><span class="pi">:</span>
-      <span class="na">type</span><span class="pi">:</span> <span class="s">posts</span>
-    <span class="na">values</span><span class="pi">:</span>
-      <span class="na">comments</span><span class="pi">:</span> <span class="no">true</span>
-</code></pre></div></div>
-
-<h3 id="restoring-the-about-page">Restoring the about page</h3>
-<p>Hydejack now has a dedicated layout for about pages.
-To use it, open <code class="language-plaintext highlighter-rouge">about.md</code> and change the <code class="language-plaintext highlighter-rouge">layout</code> in the front matter to <code class="language-plaintext highlighter-rouge">about</code>
-and delete <code class="language-plaintext highlighter-rouge">{% include about-short.html author=site.author %}</code>.</p>
-
+  
 </article>
+
 
 
   <hr class="dingbat related mb6" />
 
 
 
+
+
+
+  
+     
+
+
+  <aside class="about related mt4 mb4" role="complementary">
+    
+    
+
+<div class="author mt4">
+  
+
+  
+    
+
+
+<img
+  
+    src="/assets/img/me.jpeg"
+    srcset="/assets/img/me.jpeg 1x,/assets/img/me.jpeg 2x"
+    
+  
+  alt="Kexin Guo"
+  class="avatar"
+  
+  width="120"
+  height="120"
+  loading="lazy"
+/>
+
+  
+
+  
+  
+  <h2  class="page-title hr-bottom">
+    About
+  </h2>
+
+  <p>Hi, I am a data analyst with 3-year experience in China IT Industry.</p>
+
+<p>Before the career transition, I was an astrophysicist, 
+focusing on galaxy evolution based on large-sample statistical analysis.</p>
+
+<p>I am also an amateur in Japanese translation. 
+I like listening to music and swimming in my idle time. <a href="/assets/files/resume_english.pdf"><em>RESUME</em></a></p>
+
+<p class="faded">本主页为2022年gap期间建立，期间又重复自学了很多东西，尽可能在遗忘前记录于此，在精不在多.
+但中英混杂，有时可能不易阅读，更显露出才疏学浅，怠于整理。若有错处还请不吝赐教
+<a href="/assets/files/gh_resume.pdf"><em>简历在此</em></a>
+<a href="/blog/2022-05-25-work_xmind"><em>工作记录(脑图)</em></a></p>
+
+
+  <div class="sidebar-social">
+    <span class="sr-only">Social:</span>
+<ul>
+  
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://twitter.com/raintuner" title="Twitter" class="no-mark-external">
+      <span class="icon-twitter"></span>
+      <span class="sr-only">Twitter</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://github.com/kxguo" title="GitHub" class="no-mark-external">
+      <span class="icon-github"></span>
+      <span class="sr-only">GitHub</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="mailto:<kxguo@pku.edu.cn>" title="Email" class="no-mark-external">
+      <span class="icon-mail"></span>
+      <span class="sr-only">Email</span>
+    </a>
+  </li>
+
+
+    
+  
+</ul>
+
+  </div>
+</div>
+
+  </aside>
+
+
+  
+
+  
+  
+
+  
+    
+
+
+  <aside class="related mb4" role="complementary">  <h2 class="hr-bottom">Related Posts</h2>  <ul class="related-posts">                  <li class="h4">  <a href="/blog/2022-08-27-google_rel/" class="flip-title"><span>Google Cloud 部署和data studio可视化相关</span></a>  <time class="faded fine" datetime="2022-08-27T00:00:00+08:00">27 Aug 2022</time></li>                        <li class="h4">  <a href="/blog/2022-08-04-sql_notes/" class="flip-title"><span>SQL Notes</span></a>  <time class="faded fine" datetime="2022-08-04T00:00:00+08:00">04 Aug 2022</time></li>                        <li class="h4">  <a href="/blog/2022-05-25-work_xmind/" class="flip-title"><span>工作记录（脑图）</span></a>  <time class="faded fine" datetime="2022-05-25T00:00:00+08:00">25 May 2022</time></li>            </ul></aside>
+
+  
+
+  
+  
+
+  
+    
+
+  
 
 
   
