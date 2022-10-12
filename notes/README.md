@@ -13,3 +13,5 @@ permalink: /notes/
 * [**常用工具**](tools.md)
 
 * [**Python画图模块**](notes_plot.md)
+
+* [**概率论读书笔记**](notes_stat.md)

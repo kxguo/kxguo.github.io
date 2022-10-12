@@ -32,22 +32,21 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   
     
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Example | Kexin Guo</title>
+<title>概率论读书笔记 | Kexin Guo</title>
 <meta name="generator" content="Jekyll v3.9.2" />
-<meta property="og:title" content="Example" />
+<meta property="og:title" content="概率论读书笔记" />
 <meta name="author" content="Kexin Guo" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="This is a featured category, which have their own page. Check out _featured_tags/example.md to learn how to create your own." />
-<meta property="og:description" content="This is a featured category, which have their own page. Check out _featured_tags/example.md to learn how to create your own." />
-<link rel="canonical" href="http://localhost:4000/example/" />
-<meta property="og:url" content="http://localhost:4000/example/" />
+<meta name="description" content="南开大学《概率论》读书笔记，概念摘要和重点习题记录" />
+<meta property="og:description" content="南开大学《概率论》读书笔记，概念摘要和重点习题记录" />
+<link rel="canonical" href="http://localhost:4000/notes/notes_stat/" />
+<meta property="og:url" content="http://localhost:4000/notes/notes_stat/" />
 <meta property="og:site_name" content="Kexin Guo" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-10-12T10:55:22+08:00" />
+<meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Example" />
+<meta property="twitter:title" content="概率论读书笔记" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Kexin Guo"},"dateModified":"2022-10-12T10:55:22+08:00","datePublished":"2022-10-12T10:55:22+08:00","description":"This is a featured category, which have their own page. Check out _featured_tags/example.md to learn how to create your own.","headline":"Example","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/logo.png"},"name":"Kexin Guo"},"url":"http://localhost:4000/example/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Kexin Guo"},"description":"南开大学《概率论》读书笔记，概念摘要和重点习题记录","headline":"概率论读书笔记","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/logo.png"},"name":"Kexin Guo"},"url":"http://localhost:4000/notes/notes_stat/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -75,7 +74,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 <meta name="generator" content="Hydejack v9.1.6" />
 
 
-<link rel="alternate" href="http://localhost:4000/example/" hreflang="en">
+<link rel="alternate" href="http://localhost:4000/notes/notes_stat/" hreflang="en">
 
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Kexin Guo" />
 
@@ -178,7 +177,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 
   <main
   id="_main"
-  class="content layout-list"
+  class="content layout-page"
   role="main"
 >
   <nav id="breadcrumbs" class="screen-only"><ul>
@@ -189,7 +188,16 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
       <li>
         
           <span>/</span>
-          <span>example</span>
+          
+          
+          <a href="/notes/">notes</a>
+        
+      </li>
+    
+      <li>
+        
+          <span>/</span>
+          <span>notes_stat</span>
         
       </li>
     
@@ -197,14 +205,14 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 </ul></nav>
   <article class="page mb6" role="article">
   <header>
-    <h1 class="page-title">Example</h1>
+    <h1 class="page-title">概率论读书笔记</h1>
     
 
 
 
   
     <p class="note-sm" >
-      This is a featured category, which have their own page. Check out <code class="language-plaintext highlighter-rouge">_featured_tags/example.md</code> to learn how to create your own.
+      南开大学《概率论》读书笔记，概念摘要和重点习题记录
 
     </p>
   
@@ -212,99 +220,118 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 
   </header>
 
-  
+  <p>快速定位：<a href="#概念摘要">概念摘要</a>
+, <a href="#习题">习题</a></p>
 
+<ol id="markdown-toc">
+  <li><a href="#概念摘要" id="markdown-toc-概念摘要">概念摘要</a>    <ol>
+      <li><a href="#非测度论体系定义古典概率和几何概型" id="markdown-toc-非测度论体系定义古典概率和几何概型">非测度论体系定义（古典概率和几何概型）</a></li>
+      <li><a href="#测度论体系定义" id="markdown-toc-测度论体系定义">测度论体系定义</a></li>
+    </ol>
+  </li>
+  <li><a href="#习题" id="markdown-toc-习题">习题</a>    <ol>
+      <li><a href="#154-全概率公式bayes公式和递推方法" id="markdown-toc-154-全概率公式bayes公式和递推方法">1.5.4 （全概率公式、Bayes公式和递推方法）</a>        <ol>
+          <li><a href="#习题5" id="markdown-toc-习题5">习题5</a></li>
+          <li><a href="#习题11" id="markdown-toc-习题11">习题11</a></li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+</ol>
 
+<h2 id="概念摘要">概念摘要</h2>
+<h3 id="非测度论体系定义古典概率和几何概型">非测度论体系定义（古典概率和几何概型）</h3>
+<ul>
+  <li>随机试验：进行一次试验，如果其所得结果不能完全预言，但其全体可能结果是已知的，则称此试验为随机试验</li>
+  <li>样本点：随机试验的每个可能结果称为一个样本点</li>
+  <li>随机试验决定了样本点和样本空间</li>
+  <li>事件/随机事件：由部分样本点组成的试验结果为随机事件，简称作事件</li>
+  <li>当样本空间为又穷或至多可列无穷的集合时，可取其任何子集为事件。而当样本空间为不可列无穷时，只能取 \(\Omega\) 的一部分
+性质较好的（可测的）子集作为随机事件，详见<a href="#测度论体系定义">测度论体系定义</a></li>
+</ul>
 
-
-
-
-
-
-
-
-
-  
-  
-    
-    <h2 id="y-2022" class="hr-bottom">2022</h2>
-    <ul class="related-posts">
-    
-  
-  
-
-
-<li class="h4">
-  <a href="/blog/2022-08-27-google_rel/" class="flip-title"><span>Google Cloud 部署和data studio可视化相关</span></a>
-  <time class="faded fine" datetime="2022-08-27T00:00:00+08:00">27 Aug</time>
-</li>
-
-  
-
-  
-  
-  
-
-
-<li class="h4">
-  <a href="/blog/2022-08-26-mev/" class="flip-title"><span>MEV transaction analysis - a sandwich attack</span></a>
-  <time class="faded fine" datetime="2022-08-26T00:00:00+08:00">26 Aug</time>
-</li>
-
-  
-
-  
-  
-  
-
-
-<li class="h4">
-  <a href="/blog/2022-08-04-sql_notes/" class="flip-title"><span>SQL Notes</span></a>
-  <time class="faded fine" datetime="2022-08-04T00:00:00+08:00">04 Aug</time>
-</li>
-
-  
-
-  
-  
-  
-
-
-<li class="h4">
-  <a href="/blog/2022-05-25-work_xmind/" class="flip-title"><span>工作记录（脑图）</span></a>
-  <time class="faded fine" datetime="2022-05-25T00:00:00+08:00">25 May</time>
-</li>
-
-  
-
-  
-  
-  
-
-
-<li class="h4">
-  <a href="/blog/2022-02-04-crawler/" class="flip-title"><span>爬取orv并制作epub</span></a>
-  <time class="faded fine" datetime="2022-02-04T00:00:00+08:00">04 Feb</time>
-</li>
-
-  
-
-  
-  
+<h3 id="测度论体系定义">测度论体系定义</h3>
+<ul>
+  <li>测度：在一个给定集合 \(\Omega\) 的某一子集 \(\rm C\) 上定义的一个满足完全可加性的非负函数 \(\mu(A)\)</li>
+  <li>Lebesgue测度实例：常见的1维情形的长度、2维情形的面积、3维情形的体积等</li>
+  <li>事件/随机事件：
+由样本空间 \(\Omega\) 的某些子集组成的类 \(\mathscr{F}\)，如果满足：<br />
+    <ul>
+      <li>样本空间 \(\Omega \in \mathscr{F}\)</li>
+      <li>若 \(A \in \mathscr{F}\)，则 \(\overline{A}\in\mathscr{F}\)  (对逆封闭)</li>
+      <li>若一切 \(A_n\in \mathscr{F}\)，则 \(\bigcup\limits^\infty_{n=1} \in \mathscr{F}\)  (对可列并封闭)<br />
+，则称 \(\mathscr{F}\) 为 \(\Omega\) 上的事件 \(\sigma\) 代数，而 \(\mathscr{F}\) 中的集合称作随机事件，简称事件</li>
     </ul>
-    <h2 id="y-2021" class="hr-bottom">2021</h2>
-    <ul class="related-posts">
-    
-  
-  
+  </li>
+  <li>概率满足：
+    <ul>
+      <li>非负性</li>
+      <li>规范性：\(P(\Omega)=1\)</li>
+      <li>可列可加性：对任何两两不相容的事件列\({A_n}\)
+，有 \(P(\bigcup\limits^\infty_{n=1}A_n)=\displaystyle\sum^\infty_{n=1}P(A_n)\)</li>
+    </ul>
+  </li>
+  <li>Borel集：设 \(\Omega=R\)， 取全体半直线组成的类<br />
+\(\mathscr{P}=\{(-\infty,x): -\infty&lt;x&lt;+\infty \}\)<br />
+，则 \(\mathscr{B}=\sigma(\mathscr{P})\) 称为Borel集类，而 \(\mathscr{B}\) 中集合为Borel集。
+集合的并、交及逆运算，称为Borel运算</li>
+  <li>当 \(\Omega\) 是R的某个子区间时，我们可用 \(\Omega\) 交上述Borel子集类 \(\mathscr{B}\) 中每一个集，
+并将得到的类（i.e., \(\Omega\) 中的Borel集类）作为 \(\Omega\) 上的事件 \(\sigma\) 代数</li>
+  <li>一维几何概率空间：
+样本空间 \(\Omega\) 是 \((-\infty, +\infty)\) 中的Borel集，具有正的有限Lebesque测度。
+事件 \(\sigma\) 代数 \(\mathscr{F}\) 取作 \(\Omega\) 中的Borel集类。 对每个 \(A \in \mathscr{F}\)，取 \(P(A)\) 如：<br />
+\(P(A)=\frac{\mu(A)}{\mu(\Omega)}\)<br />
+，于是得到几何概型的概率空间 \((\Omega, \mathscr{F}, P)\)</li>
+</ul>
 
+<h2 id="习题">习题</h2>
+<h3 id="154-全概率公式bayes公式和递推方法">1.5.4 （全概率公式、Bayes公式和递推方法）</h3>
+<h4 id="习题5">习题5</h4>
+<ul>
+  <li>红球与黑球各5个混放在一起，将它们任意等分放入甲乙两袋中，再从两袋各任意取出一个球，求两球同色的概率</li>
+</ul>
 
-<li class="h4">
-  <a href="/blog/2021-06-26-linprog/" class="flip-title"><span>线性规划的单纯形法复习笔记和Python实现</span></a>
-  <time class="faded fine" datetime="2021-06-26T00:00:00+08:00">26 Jun</time>
-</li>
+<p>以两球同色事件为 \(A\) ，同时基于对称性，以两袋中的红黑组合 – 各5红5黑（\(B_1\)），各2红3黑或3红2黑（\(B_2\)），各4红1黑或1红4黑（\(B_3\)）分割样本空间，可得</p>
 
-  </ul>
+\[\begin{aligned} 
+P(A) &amp;=P(AB_1)+P(AB_2)+P(AB_3) \\
+     &amp;=P(A|B_1).P(B_1)+P(A|B_2).P(B_2)+P(A|B_3).P(B_3) \\
+	 &amp;=0\times(\frac{C_5^5}{C_{10}^5}\times2)
+	 +(2\times\frac{2}{5}\times\frac{3}{5})\times(\frac{C^2_5 \times C^3_5}{C^5_{10}}\times2)
+	 +(2\times\frac{4}{5}\times\frac{1}{5})\times(\frac{C^1_5 \times C^4_5}{C^5_{10}}\times2)\\
+	 &amp;=\frac{4}{9}
+\end{aligned}\]
+
+<h4 id="习题11">习题11</h4>
+<ul>
+  <li>接连抛一枚均匀硬币，直至第一次出现两个相连的正面为止。求恰抛n次的概率</li>
+</ul>
+
+<p>A为出现连续两个正面结束，所求为 \(P(An)\)，以第n次抛出正面（\(H_n\)）或背面（\(T_n\)）分割样本空间得</p>
+
+\[\begin{aligned}
+P(A_1) &amp;=0 \\
+P(A_2) &amp;=\frac{1}{2}\times\frac{1}{2}=\frac{1}{4} \\
+P(A_n) &amp;=P(A_nH_1)+P(A_nT_1)\\
+&amp;=P(A_n|H_1)P(H_1)+P(A_n|T_1)P(T_1)\\
+&amp;=\frac{1}{2}(0\times P(A_{n-1}|H_2)+\frac{1}{2}\times P(A_{n-1}|T_2))+\frac{1}{2}\times P(A_{n-1}) \\
+&amp;=\frac{1}{4}P(A_{n-2})+\frac{1}{2}P(A_{n-1})
+\end{aligned}\]
+
+<p>设\((P_n-xP_{n-1})=y(P_{n-1}-xP_{n-2})\)
+，由根与系数关系解方程得（x,y）为（\(\frac{1+\sqrt{5}}{4}, \frac{1-\sqrt{5}}{4}\)）。
+带入迭代公式，有</p>
+
+\[\begin{aligned}
+P(A_n)-xP(A_{n-1}) &amp;=y^{n-2}(P(A_2)-xP(A_1)) \\
+P(A_n) &amp;=\frac{1}{4}y^{n-2}+xP(A_{n-1}) \\
+&amp;=\frac{1}{4}y^{n-2}x^0+\frac{1}{4}y^{n-3}x^1+...+\frac{1}{4}y^0x^{n-2}\\
+&amp;=\frac{1}{4}\cdot \frac{y^{n-2}(1-(\frac{x}{y})^{n-1})}{1-\frac{x}{y}}\\
+&amp;=\frac{1}{4}\cdot \frac{y^{n-1}-x^{n-1}}{y-x}\\
+&amp;=\frac{1}{2\sqrt{5}}[(\frac{1+\sqrt{5}}{4})^{n-1}-(\frac{1-\sqrt{5}}{4})^{n-1}]
+\end{aligned}\]
+
+<p>Back to <a href="/notes/" class="heading flip-title">Some Notes</a></p>
 
 
 </article>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2022-10-08T18:39:19+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Kexin Guo</title><subtitle>This website is constructed with the Jekyll theme Hydejack. Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2022-10-12T10:55:22+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Kexin Guo</title><subtitle>This website is constructed with the Jekyll theme Hydejack. Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.
 </subtitle><author><name>Kexin Guo</name><email>kxguo@pku.edu.cn</email></author><entry><title type="html">Google Cloud 部署和data studio可视化相关</title><link href="http://localhost:4000/blog/2022-08-27-google_rel/" rel="alternate" type="text/html" title="Google Cloud 部署和data studio可视化相关" /><published>2022-08-27T00:00:00+08:00</published><updated>2022-08-27T00:00:00+08:00</updated><id>http://localhost:4000/blog/google_rel</id><content type="html" xml:base="http://localhost:4000/blog/2022-08-27-google_rel/">&lt;p&gt;快速定位：&lt;a href=&quot;#cloud function trouble shouting&quot;&gt;Cloud Function Trouble Shouting&lt;/a&gt;
 , &lt;a href=&quot;#数据洞察BI看板搭建&quot;&gt;数据洞察BI看板搭建&lt;/a&gt;&lt;/p&gt;
 
@@ -110,7 +110,8 @@ google-cloud-spanner&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;3.19.0
 &lt;p&gt;MEV (&lt;a href=&quot;https://eigenphi.io&quot;&gt;0x8cfbb935a8461e8681ac1e06b760530d824f6ef085a07e7ac49121eaee3cbe5a&lt;/a&gt;),
 is a sandwich-attach transaction discussed as an 
 &lt;a href=&quot;https://github.com/eigenphi/AwesomeTx/issues/11&quot;&gt;#AwesomeTx&lt;/a&gt; on github.
-It is also the first bundle packed in block 14811888 (before the Merge) by &lt;a href=&quot;https://flashbots-explorer.marto.lol/?block=14811888&quot;&gt;Flashbot&lt;/a&gt;.&lt;/p&gt;
+It is also the first bundle packed in block 14811888 (before the Merge) by &lt;a href=&quot;https://flashbots-explorer.marto.lol/?block=14811888&quot;&gt;Flashbot&lt;/a&gt;.
+The net profit of this attack is 37.534 ETH.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/blog/mevbundle.png&quot; alt=&quot;Full-width image&quot; /&gt;&lt;/p&gt;
 
@@ -133,7 +134,7 @@ lowering the USDC/DAI, as well as the USDC/USDT rate&lt;/p&gt;
     &lt;p&gt;The USDC swapped out in the last step was then swapped into 144,513,418 DAI
 to repay part of the 145,000,000 DAI debt.
 After withdrawing 131,705 WETH from collateral to replay the flash loan,
-486,582 DAI debt is left with 2423 WETH collateralized.&lt;/p&gt;
+486,582 DAI debt is left with 2,423 WETH collateralized.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
@@ -152,7 +153,7 @@ After withdrawing 131,705 WETH from collateral to replay the flash loan,
     &lt;p&gt;Basically the same as &lt;a href=&quot;#the-front-running-transaction&quot;&gt;The front-running transaction&lt;/a&gt;
 the front-running transaction but acting in a reversed way.
 In the beginning, the attacker borrowed a 131,705 WETH flash loan (1,18) 
-and took it as collateral to borrow 144,513,418 USDS (6)&lt;/p&gt;
+and took it as collateral to borrow 144,513,418 USDC (6)&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;The borrowed USDCs were then swapped into 145,078,476 DAI in Curve Pool&lt;/p&gt;
