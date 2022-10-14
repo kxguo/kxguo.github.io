@@ -19,7 +19,7 @@ sitemap: false
 - 样本点：随机试验的每个可能结果称为一个样本点
 - 随机试验决定了样本点和样本空间
 - 事件/随机事件：由部分样本点组成的试验结果为随机事件，简称作事件
-- 当样本空间为又穷或至多可列无穷的集合时，可取其任何子集为事件。而当样本空间为不可列无穷时，只能取 $$\Omega$$ 的一部分
+- 当样本空间为又穷或至多可列无穷的集合时，可取其任何子集为事件. 而当样本空间为不可列无穷时，只能取 $$\Omega$$ 的一部分
 性质较好的（可测的）子集作为随机事件，详见[测度论体系定义](#测度论体系定义)
 
 ### 测度论体系定义
@@ -38,15 +38,21 @@ sitemap: false
   ，有 $$P(\bigcup\limits^\infty_{n=1}A_n)=\displaystyle\sum^\infty_{n=1}P(A_n)$$
 - Borel集：设 $$\Omega=R$$， 取全体半直线组成的类\\
 $$\mathscr{P}=\{(-\infty,x): -\infty<x<+\infty \} $$\\
-，则 $$\mathscr{B}=\sigma(\mathscr{P})$$ 称为Borel集类，而 $$\mathscr{B}$$ 中集合为Borel集。
+，则 $$\mathscr{B}=\sigma(\mathscr{P})$$ 称为Borel集类，而 $$\mathscr{B}$$ 中集合为Borel集.
 集合的并、交及逆运算，称为Borel运算
 - 当 $$\Omega$$ 是R的某个子区间时，我们可用 $$\Omega$$ 交上述Borel子集类 $$\mathscr{B}$$ 中每一个集，
 并将得到的类（i.e., $$\Omega$$ 中的Borel集类）作为 $$\Omega$$ 上的事件 $$\sigma$$ 代数
 - 一维几何概率空间：
-样本空间 $$\Omega$$ 是 $$(-\infty, +\infty)$$ 中的Borel集，具有正的有限Lebesque测度。
-事件 $$\sigma$$ 代数 $$\mathscr{F}$$ 取作 $$\Omega$$ 中的Borel集类。 对每个 $$A \in \mathscr{F}$$，取 $$P(A)$$ 如：\\
+样本空间 $$\Omega$$ 是 $$(-\infty, +\infty)$$ 中的Borel集，具有正的有限Lebesque测度.
+事件 $$\sigma$$ 代数 $$\mathscr{F}$$ 取作 $$\Omega$$ 中的Borel集类. 对每个 $$A \in \mathscr{F}$$，取 $$P(A)$$ 如：\\
 $$P(A)=\frac{\mu(A)}{\mu(\Omega)}$$\\
 ，于是得到几何概型的概率空间 $$(\Omega, \mathscr{F}, P)$$
+- 事件的独立性：$$P(AB)=P(A)P(B)$$，$$A,B\in\mathscr{F}$$. 
+事件是否有独立性取决于样本空间 $$\Omega$$ 上概率测度的选择
+- 试验的独立性：$$P(A_1\times A_2)=P_1(A_1)P_2(A_2)$$，$$A_i\in\mathscr{F_i}$$，
+可测矩形$$A_1\times A_2=\{(\omega_1,\omega_2):\omega_1\in A_1且\omega_2\in A_2 \}$$的全体 $$\mathscr{C}$$
+生成的 $$\sigma$$ 代数为$$\mathscr{F_1}$$与$$\mathscr{F_2}$$的Descartes乘积.
+试验是否具有独立性取决于乘积空间上概率测度的选择
 
 ## 习题
 ### 1.5.4 （全概率公式、Bayes公式和递推方法）
